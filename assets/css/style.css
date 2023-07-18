@@ -418,7 +418,7 @@ h6 {
 
 #hero h1 {
   margin: 0;
-  font-size: 56px;
+  font-size: 100px;
   font-weight: 700;
   line-height: 72px;
   color: white;
@@ -521,7 +521,7 @@ h6 {
   }
 
   #hero h1 {
-    font-size: 28px;
+    font-size: 50px;
     line-height: 36px;
   }
 
