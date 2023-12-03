@@ -338,7 +338,7 @@ h6 {
   bottom: 15px;
   left: 15px;
   padding: 10px 0;
-  background-color: #fff;
+  background-color: rgb(12, 37, 55);
   overflow-y: auto;
   transition: 0.3s;
 }
