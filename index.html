@@ -14,30 +14,36 @@
 <body>
     <div class="bg-base-200">
       &nbsp;
-      <div class="w-full navbar bg-black rounded-lg text-white mx-auto sticky top-0" style="max-width: 85%; z-index: 100000;">
+      <div class="w-full navbar bg-black rounded-lg text-white mx-auto sticky top-6" style="max-width: 85%; z-index: 100000;">
         <div class="flex-none lg:hidden">
           <label for="my-drawer-3" aria-label="open sidebar" class="btn btn-square btn-ghost">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
           </label>
         </div> 
-        <a role="button" class="btn bg-black text-white hover:bg-slate-800 text-xl" style="border: none;" href="./index.html"><img src="./assets/img/monkeyfavicon.png" width="37" height="37">&nbsp;&nbspAtlas Autoware</a>
+        <a role="button" class="btn bg-black text-white hover:bg-slate-800 text-xl" style="border: none;" href="./index.html"><img src="./assets/img/monkeyfavicon.png" width="37" height="37">&nbsp;&nbspAtlas Autoware<span class="badge badge-warning gap-2">DEV</span></a>
         <div class="flex-1 hidden lg:block" style="text-align: right;">
           <ul class="menu menu-horizontal">
             <!-- Navbar menu content here -->
-            <li><a>Navbar Item 1</a></li>
-            <li><a>Navbar Item 2</a></li>
+            <li><a>Project Portfolio</a></li>
+            <li><a>Members</a></li>
+            <li><a>How it Works</a></li>
+            <li><a>About</a></li>
           </ul>
         </div>
       </div>
+      <br> 
       <div class="drawer" style="z-index: 100; ">
         <input id="my-drawer-3" type="checkbox" class="drawer-toggle" /> 
         <div class="drawer-content flex flex-col" style="position: sticky;">
           <!-- Navbar -->
-          <div class="hero min-h-screen" >
-            <div class="hero-content text-center">
+          <div class="hero min-h-screen" >      
+            <video style="max-width: 500;" autoplay muted loop>
+              <source src="./assets/vid/herovid.mp4" type="video/mp4" />
+            </video>      
+            <div class="hero-content text-center bg-base-200 rounded-xl" style="padding: 2.5%;">
               <div class="max-w-xl">
                 <h1 class="text-7xl font-bold">Atlas Autoware</h1>
-                <p class="py-8">Driving toward the future.</p>
+                <p class="py-8">Driving towards the future.</p>
                 <button class="btn bg-red-600 text-white">Project Portfolio</button> &nbsp;
                 <button class="btn bg-red-600 text-white">Members</button> &nbsp;
                 <button class="btn bg-red-600 text-white">How It Works</button> &nbsp;
@@ -85,11 +91,12 @@
           </div>
           </div>
           <br> 
-          <div class="drawer-side" style="z-index: 10000000000;">
+          <div class="drawer-side" style="z-index: 100000;">
             <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label> 
             <ul class="menu p-4 w-80 min-h-full bg-base-200">
               <!-- Sidebar content here -->
-              <li><a>Sidebar Item 1</a></li>
+              <li style="padding-bottom: 20px; padding-top: 20px;" class="bg-base-200"></li>              
+              <li><a> &nbsp;</a></li>
               <li><a>Sidebar Item 2</a></li>
             </ul>
           </div>
@@ -119,69 +126,6 @@
           </div>
           <br>
           <br>
-          <h1 class="text-5xl font-bold text-center">Our Timeline of Goals</h1>
-          <br>
-          <br>
-          <br>
-          <br>
-          <div style="padding-left: 15%; padding-right: 15%;">
-          <ul class="timeline timeline-snap-icon max-2xl:timeline-compact timeline-vertical">
-            <li>
-              <div class="timeline-middle">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-              </div>
-              <div class="timeline-start md:text-end mb-10 card w-96 bg-base-100 shadow-xl" style="padding: 5%;">
-                <time class="font-mono italic">2022</time>
-                <div class="text-lg font-black">1/18 Scale Self-Driving Car</div>
-                Our 1/18 scale car was our first foray into the world of self-driving vehicles. It uses a standard “hobby chassis” for modularity and easy repair. Our goal for this project was to create a vehicle which could autonomously navigate a defined track, and over the course of many months we achieved this goal. The 1/18 scale car utilizes a spinning LIDAR unit and ESP32 microcontroller for all computation and sensing. Currently, we have built 3 of these cars and we plan to release the CAD files and schematics for it in the near future.               </div>
-              <hr/>
-            </li>
-            <li>
-              <hr />
-              <div class="timeline-middle">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-              </div>
-              <div class="timeline-end mb-10 card w-96 bg-base-100 shadow-xl" style="padding: 5%;">
-                <time class="font-mono italic">2023</time>
-                <div class="text-lg font-black">1/10 Scale “F1/10” Self-Driving Car</div>
-                Currently under construction, the F1/10 Car represents a significant leap forward in our autonomous racing technology, building upon the foundation laid by our previous 1/18 scale robot. We plan to use this car as a test bench for future self driving algorithms, as well as a competitor to the annual F1/10 competition at the International Conference for Robotics and Automation. 
-              </div>
-              <hr />
-            </li>
-            <li>
-              <hr />
-              <div class="timeline-middle">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-              </div>
-              <div class="timeline-start md:text-end mb-10 card w-96 bg-base-100 shadow-xl" style="padding: 5%;">
-                <time class="font-mono italic">2024</time>
-                <div class="text-lg font-black">Atlas Beta</div>
-                Beta is an affordable and accessible 3D-Printed automotive robotic platform. The design specifications will be open-source and made freely available to the public. The primary objective of Atlas Beta is to aid middle and high school teachers, as well as extracurricular clubs. The open-source project will provide a guide with assembly instructions as well as a parts list to purchase to to construct this low cost platform in order to teach students about robotics and self-driving vehicles as well as our proprietary algorithms developed specifically for this platform. A kit will also be available for educators to purchase directly from us to simplify this process and to ensure that all the necessary components are included. The kit will contain all the required 3D-printed parts, electronics, sensors, and a comprehensive manual to assist teachers in effectively implementing the curriculum.               </div>
-              <hr />
-            </li>
-            <li>
-              <hr />
-              <div class="timeline-middle">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-              </div>
-              <div class="timeline-end mb-10 card w-96 bg-base-100 shadow-xl" style="padding: 5%;">
-                <time class="font-mono italic">2026</time>
-                <div class="text-lg font-black">Atlas Alpha</div>
-                Alpha is an Autonomous Low Speed Vehicle, street legal on all non interstate roads. Its lightweight chassis and electric AWD powertrain make it the perfect platform to develop autonomous driving algorithms on. Alpha uses an array of depth cameras for perception, fusing the data with GNSS and inertial units to gain full awareness of it's current position in space. Alpha is already in development and will help propel research regarding Autonomous driving in low speed urban environments.               </div>
-              <hr />
-            </li>
-            <li>
-              <hr />
-              <div class="timeline-middle">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
-              </div> 
-              <div class="timeline-start md:text-end mb-10 card w-96 bg-base-100 shadow-xl" style="padding: 5%;">
-                <time class="font-mono italic">2026</time>
-                <div class="text-lg font-black">Atlas Proxima</div>
-                Proxima is a full scale Self-Driving Sedan, and will meet Federal regulations for street legal status on every kind of road. Based on the Alpha platform, it will have a lengthened chassis and body, more powerful powertrain, LIDAR perception, and extended range to meet the needs of a Level 4 self-driving vehicle. With its modular body, low cost powertrain and free API, Proxima will set a new standard for open source electric vehicles and their capabilities. </div>
-            </li>
-          </ul>
-        </div>
           <br>
           <br>
           <br>
@@ -252,10 +196,6 @@
             </div>
           </div>
           <div class="2xl:hidden 2xl:container 2xl:mx-auto">
-            <br>
-            <br>
-            <br>
-            <br>
             <br>
             <br>
             <br>
