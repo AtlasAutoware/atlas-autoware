@@ -14,13 +14,13 @@
 <body>
     <div class="bg-base-200">
       &nbsp;
-      <div class="w-full navbar bg-black rounded-lg text-white mx-auto sticky top-6" style="max-width: 85%; z-index: 100000;">
+      <div class="w-full navbar bg-black rounded-lg text-white mx-auto sticky top-0" style="max-width: 85%; z-index: 100000; padding-top: 10px;">
         <div class="flex-none lg:hidden">
           <label for="my-drawer-3" aria-label="open sidebar" class="btn btn-square btn-ghost">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
           </label>
         </div> 
-        <a role="button" class="btn bg-black text-white hover:bg-slate-800 text-xl" style="border: none;" href="./index.html"><img src="./assets/img/monkeyfavicon.png" width="37" height="37">&nbsp;&nbspAtlas Autoware<span class="badge badge-warning gap-2">DEV</span></a>
+        <a role="button" class="btn bg-black text-white hover:bg-slate-800 text-xl" style="border: none;" href="./index.html"><img src="./assets/img/monkeyfavicon.png" width="37" height="37">Atlas Autoware<span class="badge bg-red-600 gap-2 text-white" style="border: transparent;">DEV</span></a>
         <div class="flex-1 hidden lg:block" style="text-align: right;">
           <ul class="menu menu-horizontal">
             <!-- Navbar menu content here -->
@@ -31,26 +31,42 @@
           </ul>
         </div>
       </div>
-      <br> 
       <div class="drawer" style="z-index: 100; ">
         <input id="my-drawer-3" type="checkbox" class="drawer-toggle" /> 
         <div class="drawer-content flex flex-col" style="position: sticky;">
           <!-- Navbar -->
           <div class="hero min-h-screen" >      
-            <video style="max-width: 500;" autoplay muted loop>
+            <video style="max-height: 500px;"  autoplay muted loop>
               <source src="./assets/vid/herovid.webm" type="video/webm" />
             </video>      
-            <div class="hero-content text-center bg-base-200 rounded-xl" style="padding: 2.5%;">
+            <div class="hero-content text-center text-white">
               <div class="max-w-xl">
-                <h1 class="text-7xl font-bold">Atlas Autoware</h1>
-                <p class="py-8">Driving towards the future.</p>
-                <button class="btn bg-red-600 text-white">Project Portfolio</button> &nbsp;
-                <button class="btn bg-red-600 text-white">Members</button> &nbsp;
-                <button class="btn bg-red-600 text-white">How It Works</button> &nbsp;
-                <button class="btn bg-red-600 text-white">About</button> &nbsp;
+                <h1 class="text-5xl font-bold bg-red-600 rounded-lg" style="padding: 5px;">&nbsp;Atlas Autoware&nbsp;</h1>
+                  <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
               </div>
             </div>
           </div>
+          <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
           <div class="2xl:hidden 2xl:container 2xl:mx-auto">
             <br>
             <br>
@@ -64,8 +80,13 @@
             <br>
             <br>
             <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
           </div>
-          <div class="content-center flex flex-col" style="margin: 0 auto;">
+          <div class="content-center flex flex-col" style="margin: 0 auto; padding-top: 20px;">
           <div class="h-56 grid 2xl:grid-cols-3 place-content-center gap-7">
             <div class="card w-96 bg-base-100 shadow-xl">
               <div class="card-body">
@@ -96,8 +117,11 @@
             <ul class="menu p-4 w-80 min-h-full bg-base-200">
               <!-- Sidebar content here -->
               <li style="padding-bottom: 20px; padding-top: 20px;" class="bg-base-200"></li>              
-              <li><a> &nbsp;</a></li>
-              <li><a>Sidebar Item 2</a></li>
+              <li> &nbsp;<a></a></li>
+              <li><a>Project Portfolio</a></li>
+              <li><a>How it Works</a></li>
+              <li><a>Members</a></li>
+              <li><a>About</a></li>
             </ul>
           </div>
           </div>
@@ -199,21 +223,25 @@
             <br>
             <br>
             <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
           </div>
           <br>
           <br>
           <br>
+          <h1 class="text-5xl font-bold text-center">Our Sponsors</h1>
+          <br>
+          <br>
+          <center><img src="./assets/img/lincolnlab.png" alt=""></center>
+          <br>
+          <center><a href="mailto:atlasautoware@gmail.com" class="btn bg-red-600 text-white">Become a Sponsor</a></center>
+          <br>
+          <br>
+          
           <footer class="footer p-4 bg-black text-neutral-content rounded-lg w-full text-white container mx-auto" style="max-width: 85%; z-index: 1000;">
             <aside class="items-center grid-flow-col">
-              <img src="./assets/img/monkeyfavicon.png" width="37" height="37">
-              <p> © 2023 Atlas Autoware.  All right reserved</p>
+              <img src="./assets/img/monkeyfavicon.png" width="30" height="30">
+              <p> © 2023 Atlas Autoware. All right reserved</p>
             </aside> 
-            <nav class="grid-flow-col gap-4 2xl:place-self-center 2xl:justify-self-end">
+            <nav class="grid-flow-col gap-4 2xl:place-self-center justify-self-end hidden">
               <a href="https://daisyui.com/"><img src="https://daisyui.com/images/daisyui-logo/daisyui-logomark.svg" width="25" height="25"></a>
               <a href="https://github.com/Eshan-K-I"><img src="./assets/img/github-mark-white.png" width="20" height="20"></a>
             </nav>
