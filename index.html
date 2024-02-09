@@ -1,565 +1,273 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Atlas Autoware</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/monkeyfavicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Home - Atlas Autoware</title>
+    <!-- Favicons -->
+    <link href="assets/img/monkeyfavicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 </head>
-
-<body style="background-color: black;">
-
-  <header id="header" class="fixed-top" style="background-color:rgb(30, 30, 30); border-color: gray;">
-    <div class="container d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo"> <img src="assets/img/monkeyfavicon.png" alt="" class="img-fluid" style="float: left;"><h1 class="logo" style="color: white; float: right; padding-top: 5px;">&nbsp;&nbsp;Atlas Autoware</h1></a>
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a style="font-size: 20px; color: white; background-color: rgb(209, 17, 73); padding: 5px 10px; border-radius: 5px;" class="nav-link scrollto active" href="./index.html#hero"><b>Home</b></a></li>
-          <li>&emsp;</li>
-          <li><a style="font-size: 20px; color: white; background-color: rgb(209, 17, 73); padding: 5px 10px; border-radius: 5px;" class="nav-link scrollto" href="./index.html#about"><b>Our Mission</b></a></li>
-          <li>&emsp;</li>
-          <li><a style="font-size: 20px; color: white; background-color: rgb(209, 17, 73); padding: 5px 10px; border-radius: 5px;" class="nav-link scrollto o" href="./portfolio-details.html"><b>Photo Gallery</b></a></li>
-          <li>&emsp;</li>
-          <li><a style="font-size: 20px; color: white; background-color: rgb(209, 17, 73); padding: 5px 10px; border-radius: 5px;" class="nav-link scrollto" href="./team.html"><b>Team</b></a></li>
-          <li>&emsp;</li>
-          <li><a style="font-size: 20px; color: white; background-color: rgb(209, 17, 73); padding: 5px 10px; border-radius: 5px;" class="nav-link scrollto" href=./index.html#faq><b>FAQ</b></a></li>
-          <!-- <li><a style="font-size: 20px; color: white" class="nav-link scrollto" href="#contact"><b>Contact Us</b></a></li> -->
-        </ul>
-    <button class="bi bi-list mobile-nav-toggle" style="background: rgb(209, 17, 73); color: white; border: 0px; max-width: 45px; padding: 5px; border-radius: 5px;"></button>
-</nav><!-- .navbar -->    
-    </div>
-  </header>
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-      <div class="row justify-content-center">
-        <div class="text-center">
-          <h1 style="color: #D11149">Atlas Autoware</h1>
-          <br><br>
-          <h2 style="font-size: 25px; padding-top: 10px;"><b>Driving toward the future.</b></h2>
+<body>
+    <div class="bg-base-200">
+      &nbsp;
+      <div class="w-full navbar bg-black rounded-lg text-white mx-auto sticky top-0" style="max-width: 85%; z-index: 100000; padding-top: 10px;">
+        <div class="flex-none lg:hidden">
+          <label for="my-drawer-3" aria-label="open sidebar" class="btn btn-square btn-ghost">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </label>
+        </div> 
+        <a role="button" class="btn bg-black text-white hover:bg-slate-800 text-xl" style="border: none;" href="./index.html"><img src="./assets/img/monkeyfavicon.png" width="37" height="37">Atlas Autoware<span class="badge bg-red-600 gap-2 text-white" style="border: transparent;">DEV</span></a>
+        <div class="flex-1 hidden lg:block" style="text-align: right;">
+          <ul class="menu menu-horizontal">
+            <!-- Navbar menu content here -->
+            <li><a>Project Portfolio</a></li>
+            <li><a href="./members.html">Members</a></li>
+            <li><a>How it Works</a></li>
+            <li><a  href="./about.html">About</a></li>
+            <li><div>
+              <label class="swap swap-rotate">
+                  <input type="checkbox" id="theme-toggle" />
+                  <!-- Sun icon for light mode -->
+                  <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 16 16">
+                    <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                  </svg>
+      
+                  <!-- Moon icon for dark mode -->
+                  <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
+                    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278M4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+                  </svg>
+              </label>
+          </div></li>
+          <li></li>
+          </ul>
+        </div>
+      </div>
+      <div class="drawer" style="z-index: 100; ">
+        <input id="my-drawer-3" type="checkbox" class="drawer-toggle" /> 
+        <div class="drawer-content flex flex-col" style="position: sticky;">
+          <!-- Navbar -->
+          <div class="hero min-h-screen" >      
+            <video style="max-height: 500px;"  autoplay muted loop>
+              <source src="./assets/vid/herovid.webm" type="video/webm" />
+            </video>      
+            <div class="hero-content text-center text-white">
+              <div class="max-w-xl">
+                <h1 class="text-5xl font-bold bg-red-600 rounded-lg" style="padding: 5px;">&nbsp;Atlas Autoware&nbsp;</h1>
+                  <br>
+              </div>
+            </div>
+          </div>
           <br>
-        </div>
-      </div>
-      <div class="text-center">
-        <a href="#about" style="border-radius: 20px; font-size: 24px; margin-left: 30px;" class="btn-get-started scrollto">Our Mission</a>
-        <a href="#team" style="font-size: 24px; border-radius: 20px; margin-left: 40px;" class="btn-get-started scrollto">Meet the Team</a>
-        <a href="./portfolio-details.html" style="border-radius: 20px; font-size: 24px; margin-left: 30px;" class="btn-get-started">Project Portfolio</a>
-      </div>
-
-      <div class="row icon-boxes">
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
-          <div class="icon-box">
-            <h4 class="title"><a href="">Machine Learning</a></h4>
-            <p class="description">We use convolutional neural networks (CNNs), reinforcement learning, and other forms of machine learning to develop increasingly capable autonomous robots. 
-            </p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+          <div class="2xl:hidden 2xl:container 2xl:mx-auto">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
           </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
-          <div class="icon-box">
-            <h4 class="title"><a href="">Algorithms</a></h4>
-            <p class="description">We develop novel algorithms for our robots to make sense of the world around them. From computer vision to graph theory, we use computer science to push our understanding of robotics forward. 
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
-          <div class="icon-box">
-            <h4 class="title"><a href="">Mechanical Engineering</a></h4>
-            <p class="description">We are building a fully 3D-printable self-driving car which will lower the cost of entry and make this technology more accessible. 
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
-          <div class="icon-box">
-            <h4 class="title"><a href="">Electrical Engineering</a></h4>
-            <p class="description">We integrate Electrical Engineering (EE) extensively in our robots. From power management systems to complex signaling, EE is a fundamental part of what we do. 
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section><!-- End Hero -->
-
-  <main id="main">
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2 style="color: #D11149">Our Mission</h2>
-          <p style="font-weight: bold; font-size: 20px;">Our mission is to build a fully street-legal self-driving car by 2026.</p>
-        </div>
-        
-        <div class="timeline">
-          <ul>
-            <li>
-              <div class="timeline-content">
-                <h2 class="date" style="padding-left: 75%;">2022</h2>
-                <h1>1/18 Scale Self-Driving Car</h1>
-                <p> Our 1/18 scale car was our first foray into the world of self-driving vehicles. It uses a standard “hobby chassis” for modularity and easy repair. Our goal for this project was to create a vehicle which could autonomously navigate a defined track, and over the course of many months we achieved this goal. The 1/18 scale car utilizes a spinning LIDAR unit and ESP32 microcontroller for all computation and sensing. Currently, we have built 3 of these cars and we plan to release the CAD files and schematics for it in the near future.
+          <div class="content-center flex flex-col" style="margin: 0 auto; padding-top: 20px;">
+          <div class="h-56 grid 2xl:grid-cols-3 place-content-center gap-7">
+            <div class="card w-96 bg-base-100 shadow-xl">
+              <div class="card-body">
+                <h2 class="card-title font-bold">Machine Learning & Algorithms</h2>
+                <p>
+                  Our team excels in developing autonomous robots by leveraging advanced machine learning techniques, including Convolutional Neural Networks (CNNs) and reinforcement learning, along with novel algorithms from computer vision to graph theory. This combination allows for an in-depth understanding and interaction with complex environments.</p>
+              </div>
+            </div>
+            <div class="card w-96 bg-base-100 shadow-xl">
+              <div class="card-body">
+                <h2 class="card-title font-bold">Mechanical & Electrical Engineering</h2>
+                <p>We are at the forefront of designing a scale self-driving car, a project that epitomizes the fusion of Mechanical and Electrical Engineering. This endeavor not only showcases our commitment to innovation and accessibility in technology but also highlights the synergy between robust mechanical design and sophisticated electrical systems, such as power management and signaling, that are fundamental to robotics.</p>
+              </div>
+            </div>
+            <div class="card w-96 bg-base-100 shadow-xl">
+              <div class="card-body">
+                <h2 class="card-title font-bold">Education & Community Engagement</h2>
+                <p>We are committed to fostering a community of innovators and learners. By providing educational resources and organizing competitions, we are opening doors for enthusiasts and aspiring engineers to learn and grow. These initiatives are designed to inspire and challenge participants, cultivating a new generation of talent in the robotics field.
                 </p>
               </div>
-            </li>
-            <li>
-              <div class="timeline-content">
-                <h2 class="date" style="transform: translateX(0%);">2023</h2>
-                <h1>1/10 Scale “F1/10” Self-Driving Car</h1>
-                <p>Paragraph: The F1/10 Car is a 1/10 Scale autonomous racecar, a more advanced and refined version of our 1/18 scale robot. We plan to use this car as a testing platform for the algorithms we develop, as well as an entry to the annual F1/10 competition at the International Conference for Robotics and Automation. Furthermore, our 1/10 scale car is a useful way to demonstrate how self-driving cars work to a wider audience in a more approachable way. Currently, the F1/10 car is under construction.</p>
-              </div>
-            </li>
-            <li>
-              <div class="timeline-content">
-                <h2 class="date" style="padding-left: 75%;">2024</h2>
-                <h1>Atlas Beta</h1>
-                <p> Beta is an affordable and accessible 3D-Printed automotive robotic platform. The design specifications will be open-source and made freely available to the public. The primary objective of Atlas Beta is to aid middle and high school teachers, as well as extracurricular clubs. The open-source project will provide a guide with assembly instructions as well as a parts list to purchase to to construct this low cost platform in order to teach students about robotics and self-driving vehicles as well as our proprietary algorithms developed specifically for this platform. A kit will also be available for educators to purchase directly from us to simplify this process and to ensure that all the necessary components are included. The kit will contain all the required 3D-printed parts, electronics, sensors, and a comprehensive manual to assist teachers in effectively implementing the curriculum. </p>
-              </div>
-            </li>
-            <li>
-              <div class="timeline-content">
-                <h2 class="date" style="padding-left: 75%;">2025</h2>
-                <h1>Atlas Alpha</h1>
-                <p>Alpha is an Autonomous Low Speed Vehicle, street legal on all non interstate roads. Its lightweight chassis and electric AWD powertrain make it the perfect platform to develop autonomous driving algorithms on. Alpha uses an array of depth cameras for perception, fusing the data with GNSS and inertial units to gain full awareness of it's current position in space. Alpha is already in development and will help propel research regarding Autonomous driving in low speed urban environments.
-                </p>
-              </div>
-            </li>
-            <li>
-              <div class="timeline-content">
-                <h2 class="date" style="transform: translateX(0%);">2026</h2>
-                <h1>Atlas Proxima</h1>
-                <p>Proxima is a full scale Self-Driving Sedan, and will meet Federal regulations for street legal status on every kind of road. Based on the Alpha platform, it will have a lengthened chassis and body, more powerful powertrain, LIDAR perception, and extended range to meet the needs of a Level 4 self-driving vehicle. With its modular body, low cost powertrain and free API,  Proxima will set a new standard for open source electric vehicles and their capabilities.
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section><!-- End About Section -->
-
-  <!-- ======= Portfolio Section ======= -->
-  <section id="portfolio" class="portfolio">
-    <div class="container" data-aos="fade-up">
-      <div class="section-title">
-        <h2 style="color: #D11149">Photo Gallery</h2>
-        <p>  </p>
-      </div>
-      <div class="row" data-aos="fade-up" data-aos-delay="150">
-        <div class="col-lg-12 d-flex justify-content-center">
-          <ul id="portfolio-flters">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-team">Team</li>
-            <li data-filter=".filter-candid">Candid</li>
-            <li data-filter=".filter-self">Self-Driving</li>
-            <li data-filter=".filter-lsv">LSV</li>
-          </ul>
-        </div>
-      </div>
-      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="300">
-        <div class="col-lg-4 col-md-6 portfolio-item filter-candid">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <!-- <h4>Photo 1</h4> -->
-              <p>Adi working on the early stages of our 1/10 scale autonomous racecar. In front of it is SpeedRacer, our low-cost autonomous racing platform which incorporates a LiDAR sensor and ESP32 microcontroller. </p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Description"> <i class="bx bx-plus"></i></a>
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-md-6 portfolio-item filter-self">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <!-- <h4>Photo 2</h4> -->
-              <p>Early testing in 2022 of our SpeedRacer platform.</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Description"><i class="bx bx-plus"></i></a>
-              </div>
-            </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-md-6 portfolio-item filter-self">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <!-- <h4>Photo 3</h4> -->
-              <p>The final SpeedRacer prototype, with 3 point LiDAR sensors added for emergency braking and steering. </p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Description"><i class="bx bx-plus"></i></a>
-              </div>
-            </div>
+          <br> 
+          <div class="drawer-side" style="z-index: 100000;">
+            <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"></label> 
+            <ul class="menu p-4 w-80 min-h-full bg-base-200">
+              <!-- Sidebar content here -->
+              <li style="padding-bottom: 20px; padding-top: 20px;" class="bg-base-200"></li>              
+              <li> &nbsp;<a></a></li>
+              <li><a>Project Portfolio</a></li>
+              <li><a>How it Works</a></li>
+              <li><a href="./members.html">Members</a></li>
+              <li><a>About</a></li>
+              <li></li>
+            </ul>
           </div>
-        </div>
-        <div class="col-lg-4 col-md-6 portfolio-item filter-self">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <!-- <h4>Photo 4</h4> -->
-              <p>Manav's testing car, with an Intel RealSense stereo depth camera mounted on it. </p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Description"><i class="bx bx-plus"></i></a>
-              </div>
-            </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-md-6 portfolio-item filter-self">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <!-- <h4>Photo 5</h4> -->
-              <p>A close-up of the stereo depth camera mounting to the car chassis.</p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Description"><i class="bx bx-plus"></i></a>
-              </div>
-            </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <div class="2xl:hidden 2xl:container 2xl:mx-auto">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
           </div>
-        </div>
-        <div class="col-lg-4 col-md-6 portfolio-item filter-lsv">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <!-- <h4>Photo 6</h4> -->
-              <p>  </p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Description"><i class="bx bx-plus"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 portfolio-item filter-lsv">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <!-- <h4>Photo 7</h4> -->
-              <p>  </p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Description"><i class="bx bx-plus"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 portfolio-item filter-lsv">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <!-- <h4>Photo 8</h4> -->
-              <p>  </p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Description"><i class="bx bx-plus"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 portfolio-item filter-candid">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <!-- <h4>Photo 9</h4> -->
-              <p>  </p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Description"><i class="bx bx-plus"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 portfolio-item filter-team">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portfolio/portfolio-10.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <!-- <h4>Photo 10</h4> -->
-              <p> The Atlas Autoware team (2022) </p>
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-10.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Description"><i class="bx bx-plus"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section><!-- End Portfolio Section -->
-
-  <!-- ======= Team Section ======= -->
-  <section id="officers" class="team section-bg">
-    <div class="container" data-aos="fade-up">
-        <div class="section-title">
-            <h2 style="color: #D11149">Our Officers</h2>
-        </div>
-        <div class="row">
-            <!-- Manav Gagvani -->
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                <div class="member">
-                    <div class="member-img">
-                        <img src="assets/img/team/manav_gagvani.jpg" class="img-fluid" alt="">
-                        <div class="social">
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h4 style="font-size: 22px">Manav Gagvani</h4>
-                        <span style="font-size: 18px">President</span>
-                    </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <h1 class="text-5xl font-bold text-center">Our Officers</h1>
+          <br>
+          <br>
+          <br>
+          <div class="grid 2xl:grid-cols-3 2xl:gap-7 justify-center" style="max-width: 1200px; margin: 0 auto;">
+            <div class="card w-96 bg-base-100 shadow-xl">
+              <figure><img src="./assets/img/team/officers/pfp1.jpg"></figure>
+              <div class="card-body">
+                <h2 class="card-title">Manav Gagvani</h2>
+                <p>President</p>
+                <div class="card-actions justify-center">
                 </div>
+              </div>
             </div>
-            <!-- Adi Desai -->
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                <div class="member">
-                    <div class="member-img">
-                        <img src="assets/img/team/adi_desai.jpg" class="img-fluid" alt="">
-                        <div class="social">
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h4 style="font-size: 22px">Adi Desai</h4>
-                        <span style="font-size: 18px">Vice President and Treasurer</span>
-                    </div>
+            <div class="card w-96 bg-base-100 shadow-xl">
+              <figure><img src="./assets/img/team/officers/pfp2.jpg"  width="5000px" height="5000px"/></figure>
+              <div class="card-body">
+                <h2 class="card-title">Adi Desai</h2>
+                <p>Vice President and Treasurer</p>
+                <div class="card-actions justify-center">
                 </div>
+              </div>
             </div>
-            <!-- Christopher Lim -->
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                <div class="member">
-                    <div class="member-img">
-                        <img src="assets/img/team/chris_lim.jpg" class="img-fluid" alt="">
-                        <div class="social">
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h4 style="font-size: 22px">Christopher Lim</h4>
-                        <span style="font-size: 18px">Mechanical Lead</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Austin Thomas -->
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                <div class="member">
-                    <div class="member-img">
-                        <img src="assets/img/team/austin_thomas.jpg" class="img-fluid" alt="">
-                        <div class="social">
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h4 style="font-size: 22px">Austin Thomas</h4>
-                        <span style="font-size: 18px">Software Lead and Webmaster</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <!-- Ram Vempati -->
-            <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-                <div class="member">
-                    <div class="member-img">
-                        <img src="assets/img/team/ram_vempati.jpg" class="img-fluid" alt="">
-                        <div class="social">
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h4 style="font-size: 22px">Ram Vempati</h4>
-                        <span style="font-size: 18px">LSV Lead</span>
-                    </div>
-                </div>
-        </div>
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="member">
-                <div class="member-img">
-                    <img src="assets/img/team/Shreyan-D.png" class="img-fluid" alt="">
-                    <div class="social">
-                        <a href=""><i class="bi bi-facebook"></i></a>
-                        <a href=""><i class="bi bi-linkedin"></i></a>
-                    </div>
-                </div>
-                <div class="member-info">
-                    <h4 style="font-size: 22px">Shreyan Dey</h4>
-                    <span style="font-size: 18px">Engineering Lead</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+            <div class="card w-96 bg-base-100 shadow-xl">
+              <figure><img src="./assets/img/team/officers/pfp3.jpg" /></figure>
+              <div class="card-body">
+                <h2 class="card-title">Christopher Lim</h2>
+                <p>Mechanical Lead</p>
+                <div class="card-actions justify-center">
 
-<div class="text-center">
-  <a href="./team.html#team" style="border-radius: 20px; font-size: 24px; margin-left: 30px; background-color: rgb(209, 17, 73); padding: 1%; color: white;" class="btn-get-started scrollto">More Team Members</a>
-</div>
-
-  <!-- ======= Frequently Asked Questions Section ======= -->
-  <section id="faq" class="faq section-bg">
-    <div class="container" data-aos="fade-up">
-
-      <div class="section-title">
-        <h2 style="color: #D11149">Frequently Asked Questions</h2>
-      </div>
-
-      <div class="faq-list">
-        <ul>
-          <li data-aos="fade-up">
-            <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">What is Atlas Autoware?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-            <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
-              <p>
-                We are a robotics team who develop autonomous vehicle technology, and compete in prestigious international competitions for autonomous robotics. We also plan on building a full-scale self-driving car by 2026.
-              </p>
+                </div>
+              </div>
             </div>
-          </li>
-
+          </div>
+          <br>
+          <br>
+          <br>
+          <div class="grid 2xl:grid-cols-3 2xl:gap-7 justify-center" style="max-width: 1200px; margin: 0 auto;">
+            <div class="card w-96 bg-base-100 shadow-xl">
+              <figure><img src="./assets/img/team/officers/pfp4.png"></figure>
+              <div class="card-body">
+                <h2 class="card-title">Austin Thomas</h2>
+                <p>Software Lead</p>
+                <div class="card-actions justify-center">
+                </div>
+              </div>
+            </div>
+            <div class="card w-96 bg-base-100 shadow-xl">
+              <figure><img src="./assets/img/team/officers/pfp5.jpg"  width="5000px" height="5000px"/></figure>
+              <div class="card-body">
+                <h2 class="card-title">Ram Vempatii</h2>
+                <p>LSV Lead</p>
+                <div class="card-actions justify-center">
+                </div>
+              </div>
+            </div>
+            <div class="card w-96 bg-base-100 shadow-xl">
+              <figure style="max-height: 400px;"><img src="./assets/img/team/officers/pfp6.png"/></figure>
+              <div class="card-body">
+                <h2 class="card-title">Shreyan Day</h2>
+                <p>Engineering Lead</p>
+                <div class="card-actions justify-center">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="2xl:hidden 2xl:container 2xl:mx-auto">
+            <br>
+            <br>
+            <br>
+          </div>
+          <br>
+          <br>
+          <br>
+          <h1 class="text-5xl font-bold text-center">Our Sponsors</h1>
+          <br>
+          <br>
+          <center><img src="./assets/img/beaverworks_logo.png" width="60%"></center>
+          <br>
+          <br>
+          <center><a href="mailto:atlasautoware@gmail.com" class="btn bg-red-600 text-white">Become a Sponsor</a></center>
+          <br>
+          <br>
           
-
-        </ul>
-      </div>
-
-    </div>
-  </section><!-- End Frequently Asked Questions Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <!-- <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2 style="color: #5bd183">Contact Us</h2>
-          <p>Our location is based at Thomas Jefferson High School for Science and Technology.</p>
+          <footer class="footer p-4 bg-black text-neutral-content rounded-lg w-full text-white container mx-auto" style="max-width: 85%; z-index: 1000;">
+            <aside class="items-center grid-flow-col">
+              <img src="./assets/img/monkeyfavicon.png" width="30" height="30">
+              <p> © 2023 Atlas Autoware. All right reserved</p>
+            </aside> 
+            <nav class="grid-flow-col gap-4 2xl:place-self-center justify-self-end hidden">
+              <a href="https://daisyui.com/"><img src="https://daisyui.com/images/daisyui-logo/daisyui-logomark.svg" width="25" height="25"></a>
+              <a href="https://github.com/Eshan-K-I"><img src="./assets/img/github-mark-white.png" width="20" height="20"></a>
+            </nav>
+          </footer>
         </div>
-
-        <div>
-          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12266.384853686823!2d-77.1686028630521!3d38.81421759500699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b2e02877e895%3A0xc12f564af4d3bcab!2sThomas%20Jefferson%20High%20School%20for%20Science%20and%20Technology!5e0!3m2!1sen!2sus!4v1659558297045!5m2!1sen!2sus" frameborder="0" allowfullscreen></iframe>
-        </div>
-
-        <div class="row mt-5">
-
-          <div class="col-lg-4 py-3">
-            <div class="info" style="background-color: black;">
-              <div class="address">
-                <i style="color: black" class="bi bi-geo-alt"></i>
-                <h4 style="color: white">Location:</h4>
-                <p style="color: white">6560 Braddock Rd, Alexandria, VA 22312</p>
-              </div>
-
-              <div class="email">
-                <i style="color: black" class="bi bi-envelope"></i>
-                <h4 style="color: white">Email:</h4>
-                <p style="color: white">atlasautoware@gmail.com</p>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="col-lg-8 mt-5 mt-lg-0">
-
-            <form style="background-color: black;" action="https://formspree.io/f/xbjbrqzz" method="POST">
-              <div class="row">
-                <div class="col-md-6 py-3 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Name" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-3">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Email Address" required>
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-              </div>
-              
-              <div class="text-center"><button type="submit" style="border-radius: 10px; border-color: black; background-color: #5bd183; margin-top: 20px; font-size: 18px; padding-left: 15px; padding-right: 15px; padding-top: 6px; padding-bottom: 6px;">Send Message</button></div>
-            </form>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Atlas Autoware</h3>
-            <p>
-              <!-- <strong>Location:</strong><br>6560 Braddock Rd,<br>Alexandria, VA 22312<br> -->
-              <strong>Email:</strong> atlasautoware@gmail.com<br>
-            </p>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links"></div>
-
-          <div class="col-lg-3 col-md-6 footer-links"></div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container d-md-flex py-4">
-
-      <div class="me-md-auto text-center text-md-start">
-        <div class="copyright">
-          Please consider following our social media for more information about AtlasAutoware!
-        </div>
-        <div class="credits"></div>
-      </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <!-- <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> -->
-        <a href="https://www.instagram.com/atlasautoware/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <!-- <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+      
 </body>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const themeToggle = document.getElementById('theme-toggle');
+    let theme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light';
+    applyTheme(theme);
 
+    themeToggle.addEventListener('change', function(e) {
+        theme = e.target.checked ? 'dark' : 'light';
+        localStorage.setItem('theme', theme);
+        applyTheme(theme);
+    });
+
+    function applyTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        themeToggle.checked = (theme === 'dark');
+    }
+});
+
+</script>
 </html>
