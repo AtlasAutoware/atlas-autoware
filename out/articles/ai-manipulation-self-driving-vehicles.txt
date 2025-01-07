@@ -1,0 +1,66 @@
+3:I[4707,[],""]
+5:I[6423,[],""]
+4:["slug","ai-manipulation-self-driving-vehicles","d"]
+0:["DW_Cm_94SOaINkj-T9TNB",[[["",{"children":["articles",{"children":[["slug","ai-manipulation-self-driving-vehicles","d"],{"children":["__PAGE__?{\"slug\":\"ai-manipulation-self-driving-vehicles\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["articles",{"children":[["slug","ai-manipulation-self-driving-vehicles","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","articles","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","articles","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/bc89fa9c4e40b20d.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_d65c78","children":["$","div",null,{"className":"min-h-screen bg-white text-black","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]}]}]],null],null],["$L6",null]]]]
+7:I[8451,["191","static/chunks/191-456a716db30f15d6.js","83","static/chunks/app/articles/%5Bslug%5D/page-597b37da58df6131.js"],"Navbar"]
+8:I[5878,["191","static/chunks/191-456a716db30f15d6.js","83","static/chunks/app/articles/%5Bslug%5D/page-597b37da58df6131.js"],"Image"]
+9:T8b7,<h1>Manipulation of AI in Self-Driving Vehicles</h1>
+<p>The rise of autonomous vehicles has brought unprecedented advances in transportation technology, but it has also introduced new security challenges that need to be addressed. In this article, we'll explore the potential vulnerabilities in AI systems that power self-driving cars and discuss methods to protect against manipulation.</p>
+<h2>Understanding the Risks</h2>
+<p>Self-driving vehicles rely heavily on artificial intelligence to make split-second decisions. These AI systems process vast amounts of data from various sensors, including:</p>
+<ul>
+<li>Cameras</li>
+<li>LiDAR</li>
+<li>Radar</li>
+<li>GPS</li>
+<li>Ultrasonic sensors</li>
+</ul>
+<p>However, these systems can be vulnerable to both physical and digital manipulation attempts.</p>
+<h2>Common Attack Vectors</h2>
+<h3>1. Sensor Spoofing</h3>
+<p>Attackers might attempt to fool sensors by creating false inputs:</p>
+<ul>
+<li>Projecting false images for cameras</li>
+<li>Using laser pulses to confuse LiDAR systems</li>
+<li>Broadcasting fake GPS signals</li>
+</ul>
+<h3>2. Model Manipulation</h3>
+<p>Machine learning models can be compromised through:</p>
+<ul>
+<li>Adversarial attacks</li>
+<li>Data poisoning during training</li>
+<li>Model extraction attempts</li>
+</ul>
+<h2>Protection Measures</h2>
+<p>To safeguard autonomous vehicles against AI manipulation, several protective measures should be implemented:</p>
+<ol>
+<li>
+<p><strong>Redundant Systems</strong></p>
+<ul>
+<li>Multiple sensor types</li>
+<li>Cross-validation of inputs</li>
+<li>Failsafe mechanisms</li>
+</ul>
+</li>
+<li>
+<p><strong>Robust Testing</strong></p>
+<ul>
+<li>Adversarial testing</li>
+<li>Penetration testing</li>
+<li>Real-world scenario validation</li>
+</ul>
+</li>
+<li>
+<p><strong>Secure Architecture</strong></p>
+<ul>
+<li>Encrypted communications</li>
+<li>Secure boot processes</li>
+<li>Regular security updates</li>
+</ul>
+</li>
+</ol>
+<h2>Conclusion</h2>
+<p>As we continue to develop and deploy autonomous vehicles, understanding and addressing AI manipulation risks becomes increasingly crucial. Through proper security measures and continuous vigilance, we can work to ensure the safety and reliability of self-driving technology.</p>
+2:["$","div",null,{"className":"min-h-screen flex flex-col","children":[["$","$L7",null,{}],["$","main",null,{"className":"flex-grow","children":["$","article",null,{"className":"container mx-auto px-4 py-16 max-w-4xl","children":[["$","$L8",null,{"src":"/article1.webp","alt":"Manipulation of AI in Self-Driving Vehicles","width":1200,"height":600,"className":"rounded-lg shadow-lg mb-8 w-full"}],["$","div",null,{"className":"mb-8","children":[["$","h1",null,{"className":"text-4xl font-bold mb-4","children":"Manipulation of AI in Self-Driving Vehicles"}],["$","div",null,{"className":"flex items-center text-slate-600","children":[["$","span",null,{"children":"Atlas Autoware Team"}],["$","span",null,{"className":"mx-2","children":"•"}],["$","time",null,{"children":"1/5/2024"}]]}]]}],["$","div",null,{"className":"prose prose-lg ","dangerouslySetInnerHTML":{"__html":"$9"}}]]}]}],["$","footer",null,{"className":"bg-primary text-white py-8","children":["$","div",null,{"className":"container mx-auto px-4 flex flex-col md:flex-row justify-between items-center","children":[["$","div",null,{"className":"flex items-center space-x-2 mb-4 md:mb-0","children":[["$","$L8",null,{"src":"/monkeyfavicon.png","alt":"Atlas Autoware Logo","width":30,"height":30}],["$","p",null,{"className":"text-sm md:text-base","children":"© 2024 AtlasAutoware - A 501(c)(3) Non-Profit Organization. All rights reserved"}]]}],["$","div",null,{"className":"flex space-x-4","children":[["$","a",null,{"href":"#","target":"_blank","rel":"noopener noreferrer","children":["$","$L8",null,{"src":"/Facebook_Logo_Primary.png","alt":"Facebook","width":24,"height":24}]}],["$","a",null,{"href":"https://x.com/AtlasAutoware/following","target":"_blank","rel":"noopener noreferrer","children":["$","$L8",null,{"src":"/logo-white.png","alt":"Twitter","width":24,"height":24}]}],["$","a",null,{"href":"https://www.instagram.com/atlasautoware/","target":"_blank","rel":"noopener noreferrer","children":["$","$L8",null,{"src":"/Instagram_Glyph_Gradient.png","alt":"Instagram","width":24,"height":24}]}]]}]]}]}]]}]
+6:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Atlas Autoware"}],["$","meta","3",{"name":"description","content":"The premier high school-led self-driving car team"}],["$","meta","4",{"name":"next-size-adjust"}]]
+1:null

@@ -1,0 +1,77 @@
+3:I[4707,[],""]
+5:I[6423,[],""]
+4:["slug","introduction-to-lidar-technology","d"]
+0:["DW_Cm_94SOaINkj-T9TNB",[[["",{"children":["articles",{"children":[["slug","introduction-to-lidar-technology","d"],{"children":["__PAGE__?{\"slug\":\"introduction-to-lidar-technology\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["articles",{"children":[["slug","introduction-to-lidar-technology","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","articles","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","articles","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/bc89fa9c4e40b20d.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_d65c78","children":["$","div",null,{"className":"min-h-screen bg-white text-black","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}]}]}]}]],null],null],["$L6",null]]]]
+7:I[8451,["191","static/chunks/191-456a716db30f15d6.js","83","static/chunks/app/articles/%5Bslug%5D/page-597b37da58df6131.js"],"Navbar"]
+8:I[5878,["191","static/chunks/191-456a716db30f15d6.js","83","static/chunks/app/articles/%5Bslug%5D/page-597b37da58df6131.js"],"Image"]
+9:Ta79,<h1>How LiDAR Works: An Introduction to LiDAR Technology</h1>
+<p>LiDAR (Light Detection and Ranging) technology has become a cornerstone of autonomous vehicle development. This article explores the fundamentals of LiDAR and its crucial role in enabling self-driving capabilities.</p>
+<h2>What is LiDAR?</h2>
+<p>LiDAR is a remote sensing technology that uses laser pulses to measure distances and create detailed 3D maps of the environment. The system works by:</p>
+<ol>
+<li>Emitting laser pulses</li>
+<li>Measuring the time taken for the pulse to return</li>
+<li>Calculating distances based on the speed of light</li>
+<li>Creating point clouds from multiple measurements</li>
+</ol>
+<h2>Core Components</h2>
+<p>A typical LiDAR system consists of several key components:</p>
+<ul>
+<li><strong>Laser emitter</strong>: Generates the light pulses</li>
+<li><strong>Receiver</strong>: Detects returning signals</li>
+<li><strong>Scanning mechanism</strong>: Directs the laser pulses</li>
+<li><strong>Processing unit</strong>: Converts raw data into usable information</li>
+</ul>
+<h2>Applications in Autonomous Vehicles</h2>
+<h3>1. Environmental Mapping</h3>
+<p>LiDAR creates highly accurate 3D maps of the vehicle's surroundings, enabling:</p>
+<ul>
+<li>Precise object detection</li>
+<li>Road boundary identification</li>
+<li>Obstacle avoidance</li>
+</ul>
+<h3>2. Localization</h3>
+<p>The technology helps vehicles determine their exact position by:</p>
+<ul>
+<li>Comparing real-time scans with pre-existing maps</li>
+<li>Providing centimeter-level accuracy</li>
+<li>Operating in various weather conditions</li>
+</ul>
+<h2>Types of LiDAR Systems</h2>
+<h3>Mechanical LiDAR</h3>
+<ul>
+<li>Uses rotating mechanisms</li>
+<li>Provides 360-degree coverage</li>
+<li>Higher cost but very reliable</li>
+</ul>
+<h3>Solid-State LiDAR</h3>
+<ul>
+<li>No moving parts</li>
+<li>More compact and durable</li>
+<li>Lower cost but limited field of view</li>
+</ul>
+<h2>Future Developments</h2>
+<p>The future of LiDAR technology looks promising with several emerging trends:</p>
+<ol>
+<li>
+<p><strong>Miniaturization</strong></p>
+<ul>
+<li>Smaller form factors</li>
+<li>Improved integration possibilities</li>
+<li>Lower production costs</li>
+</ul>
+</li>
+<li>
+<p><strong>Enhanced Capabilities</strong></p>
+<ul>
+<li>Higher resolution</li>
+<li>Longer range</li>
+<li>Better performance in adverse conditions</li>
+</ul>
+</li>
+</ol>
+<h2>Conclusion</h2>
+<p>LiDAR technology continues to evolve and improve, making it an increasingly valuable tool for autonomous vehicles and many other applications. Understanding its principles and capabilities is crucial for anyone interested in the future of autonomous transportation.</p>
+2:["$","div",null,{"className":"min-h-screen flex flex-col","children":[["$","$L7",null,{}],["$","main",null,{"className":"flex-grow","children":["$","article",null,{"className":"container mx-auto px-4 py-16 max-w-4xl","children":[["$","$L8",null,{"src":"/article2.webp","alt":"How Lidar Lidars: An Introduction to LiDAR Technology","width":1200,"height":600,"className":"rounded-lg shadow-lg mb-8 w-full"}],["$","div",null,{"className":"mb-8","children":[["$","h1",null,{"className":"text-4xl font-bold mb-4","children":"How Lidar Lidars: An Introduction to LiDAR Technology"}],["$","div",null,{"className":"flex items-center text-slate-600","children":[["$","span",null,{"children":"Atlas Autoware Team"}],["$","span",null,{"className":"mx-2","children":"•"}],["$","time",null,{"children":"1/5/2024"}]]}]]}],["$","div",null,{"className":"prose prose-lg ","dangerouslySetInnerHTML":{"__html":"$9"}}]]}]}],["$","footer",null,{"className":"bg-primary text-white py-8","children":["$","div",null,{"className":"container mx-auto px-4 flex flex-col md:flex-row justify-between items-center","children":[["$","div",null,{"className":"flex items-center space-x-2 mb-4 md:mb-0","children":[["$","$L8",null,{"src":"/monkeyfavicon.png","alt":"Atlas Autoware Logo","width":30,"height":30}],["$","p",null,{"className":"text-sm md:text-base","children":"© 2024 AtlasAutoware - A 501(c)(3) Non-Profit Organization. All rights reserved"}]]}],["$","div",null,{"className":"flex space-x-4","children":[["$","a",null,{"href":"#","target":"_blank","rel":"noopener noreferrer","children":["$","$L8",null,{"src":"/Facebook_Logo_Primary.png","alt":"Facebook","width":24,"height":24}]}],["$","a",null,{"href":"https://x.com/AtlasAutoware/following","target":"_blank","rel":"noopener noreferrer","children":["$","$L8",null,{"src":"/logo-white.png","alt":"Twitter","width":24,"height":24}]}],["$","a",null,{"href":"https://www.instagram.com/atlasautoware/","target":"_blank","rel":"noopener noreferrer","children":["$","$L8",null,{"src":"/Instagram_Glyph_Gradient.png","alt":"Instagram","width":24,"height":24}]}]]}]]}]}]]}]
+6:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Atlas Autoware"}],["$","meta","3",{"name":"description","content":"The premier high school-led self-driving car team"}],["$","meta","4",{"name":"next-size-adjust"}]]
+1:null

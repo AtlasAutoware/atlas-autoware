@@ -1,0 +1,4 @@
+name = "atlas-autoware"
+compatibility_date = "2025-01-07"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
