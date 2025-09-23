@@ -15,12 +15,6 @@ const teamMembers = [
     department: "Leadership"
   },
   {
-    name: "Logan Bradley",
-    role: "Secretary",
-    image: "/loganbradley.webp",
-    department: "Leadership"
-  },
-  {
     name: "Aarav Maram",
     role: "Treasurer and Engineering Lead",
     image: "/aaravmaram.jpg",
@@ -28,14 +22,14 @@ const teamMembers = [
   },
   {
     name: "Michael Yaroschuk",
-    role: "Web Master",
+    role: "Computer Science Lead",
     image: "/michealyaroschuk.jpg",
     department: "Technology"
   },
   {
-    name: "Parasmai Salunkhe",
-    role: "CS Lead",
-    image: "/parasmaisalunkhe.webp",
+    name: "Shayaan Doodekula",
+    role: "Web Master",
+    image: "/logo.png",
     department: "Technology"
   }
 ]
