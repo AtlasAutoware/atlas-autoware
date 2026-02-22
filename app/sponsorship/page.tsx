@@ -1,116 +1,231 @@
+import type { Metadata } from 'next'
+import { Check } from 'lucide-react'
 import { Navbar } from '../../components/Navbar'
-import Image from 'next/image'
-import Link from 'next/link'
-import { Button } from "@/components/ui/button"
+import { Footer } from '../../components/Footer'
 
-const sponsorshipLevels = [
+export const metadata: Metadata = {
+  title: 'Sponsorship',
+  description: 'Partner with Atlas Autoware and support the next generation of autonomous vehicle engineers.',
+}
+
+const whySponsors = [
   {
-    name: "Platinum",
-    amount: "$10,000+",
-    benefits: [
-      "Large logo on team vehicle",
-      "Prominent website placement",
-      "Social media shoutouts",
-      "VIP invitations to team events",
-      "Exclusive team merchandise",
-      "All Gold level benefits"
-    ]
+    title: 'Support Innovation',
+    description:
+      "Your sponsorship directly funds cutting-edge autonomous vehicle technology, pushing the boundaries of what's possible at the high school level.",
   },
   {
-    name: "Gold",
-    amount: "$5,000 - $9,999",
-    benefits: [
-      "Medium logo on team vehicle",
-      "Website recognition",
-      "Team photo and thank you plaque",
-      "All Silver level benefits"
-    ]
+    title: 'Inspire Future Engineers',
+    description:
+      "By supporting our team, you're helping inspire and educate the next generation of engineers, programmers, and innovators in the AV industry.",
   },
   {
-    name: "Silver",
-    amount: "$1,000 - $4,999",
-    benefits: [
-      "Small logo on team vehicle",
-      "Website mention",
-      "Team updates and newsletters"
-    ]
+    title: 'Brand Visibility',
+    description:
+      'Gain exposure for your brand through competitions, events, and our online presence — reaching a tech-savvy, forward-thinking audience.',
   },
   {
-    name: "Bronze",
-    amount: "Up to $999",
+    title: 'Community Impact',
+    description:
+      'Your support enables us to engage the community through workshops, demonstrations, and outreach programs promoting STEM education.',
+  },
+]
+
+const tiers = [
+  {
+    name: 'Platinum',
+    amount: '$10,000+',
+    style: 'tier-platinum',
+    labelColor: 'text-slate-300',
+    amountColor: 'text-slate-200',
+    featured: true,
     benefits: [
-      "Website mention",
-      "Team updates and newsletters"
-    ]
-  }
+      'Large logo on team vehicle',
+      'Prominent website placement',
+      'Social media shoutouts',
+      'VIP invitations to team events',
+      'Exclusive team merchandise',
+      'All Gold level benefits',
+    ],
+  },
+  {
+    name: 'Gold',
+    amount: '$5,000 – $9,999',
+    style: 'tier-gold',
+    labelColor: 'text-yellow-400',
+    amountColor: 'text-yellow-300',
+    featured: false,
+    benefits: [
+      'Medium logo on team vehicle',
+      'Website recognition',
+      'Team photo and thank-you plaque',
+      'All Silver level benefits',
+    ],
+  },
+  {
+    name: 'Silver',
+    amount: '$1,000 – $4,999',
+    style: 'tier-silver',
+    labelColor: 'text-slate-400',
+    amountColor: 'text-slate-300',
+    featured: false,
+    benefits: [
+      'Small logo on team vehicle',
+      'Website mention',
+      'Team updates and newsletters',
+    ],
+  },
+  {
+    name: 'Bronze',
+    amount: 'Up to $999',
+    style: 'tier-bronze',
+    labelColor: 'text-orange-400',
+    amountColor: 'text-orange-300',
+    featured: false,
+    benefits: [
+      'Website mention',
+      'Team updates and newsletters',
+    ],
+  },
 ]
 
 export default function Sponsorship() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-[#030305]">
       <Navbar />
-      <main className="flex-grow">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-5xl font-bold text-center mb-16 text-navy">Sponsorship Opportunities</h1>
-          
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-navy">Why Sponsor Atlas Autoware?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-xl font-semibold mb-4 text-navy">Support Innovation</h3>
-                <p className="text-slate-600">Your sponsorship directly contributes to the development of cutting-edge autonomous vehicle technology, pushing the boundaries of what's possible in the field.</p>
-              </div>
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-xl font-semibold mb-4 text-navy">Inspire Future Engineers</h3>
-                <p className="text-slate-600">By supporting our team, you're helping to inspire and educate the next generation of engineers, programmers, and innovators in the autonomous vehicle industry.</p>
-              </div>
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-xl font-semibold mb-4 text-navy">Brand Visibility</h3>
-                <p className="text-slate-600">Gain exposure for your brand through our competitions, events, and online presence, reaching a tech-savvy and forward-thinking audience.</p>
-              </div>
-              <div className="bg-white rounded-lg shadow-md p-6">
-                <h3 className="text-xl font-semibold mb-4 text-navy">Community Impact</h3>
-                <p className="text-slate-600">Your support enables us to engage with the community through workshops, demonstrations, and outreach programs, promoting STEM education and awareness.</p>
-              </div>
+
+      <main className="flex-grow pt-24">
+        {/* ── Header ───────────────────────────────────────── */}
+        <div className="relative py-20 overflow-hidden">
+          <div className="absolute inset-0 dot-grid opacity-30" />
+          <div className="absolute inset-0 red-glow-bg" />
+          <div className="container mx-auto px-6 text-center relative z-10">
+            <p className="text-xs font-semibold text-red-400 uppercase tracking-widest mb-4 animate-fade-in">
+              Partner With Us
+            </p>
+            <h1
+              className="text-5xl md:text-6xl font-bold title-gradient mb-6 animate-slide-up"
+              style={{ fontFamily: 'var(--font-space)' }}
+            >
+              Sponsorship
+            </h1>
+            <p className="text-slate-400 text-lg max-w-2xl mx-auto animate-slide-up delay-200">
+              Join us in shaping the future of autonomous vehicles and supporting the next generation of innovators.
+            </p>
+          </div>
+        </div>
+
+        {/* ── Why sponsor ───────────────────────────────────── */}
+        <section className="py-24">
+          <div className="container mx-auto px-6">
+            <p className="text-xs font-semibold text-red-400 uppercase tracking-widest mb-3 text-center">
+              Why Partner With Us
+            </p>
+            <h2
+              className="text-3xl md:text-4xl font-bold text-white text-center mb-14"
+              style={{ fontFamily: 'var(--font-space)' }}
+            >
+              Why Sponsor Atlas Autoware?
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {whySponsors.map((item, i) => (
+                <div key={i} className="glass-card rounded-2xl p-8">
+                  <h3
+                    className="text-lg font-bold text-white mb-3"
+                    style={{ fontFamily: 'var(--font-space)' }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-400 text-sm leading-relaxed">{item.description}</p>
+                </div>
+              ))}
             </div>
           </div>
+        </section>
 
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-navy">Sponsorship Levels</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {sponsorshipLevels.map((level, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-md p-6">
-                  <h3 className="text-2xl font-bold mb-2 text-navy">{level.name}</h3>
-                  <p className="text-xl font-semibold mb-4 text-red-600">{level.amount}</p>
-                  <ul className="list-disc list-inside text-slate-600">
-                    {level.benefits.map((benefit, i) => (
-                      <li key={i}>{benefit}</li>
+        {/* ── Sponsorship tiers ─────────────────────────────── */}
+        <section className="py-24 bg-[#0d0d12]">
+          <div className="container mx-auto px-6">
+            <p className="text-xs font-semibold text-red-400 uppercase tracking-widest mb-3 text-center">
+              Investment Levels
+            </p>
+            <h2
+              className="text-3xl md:text-4xl font-bold text-white text-center mb-14"
+              style={{ fontFamily: 'var(--font-space)' }}
+            >
+              Sponsorship Tiers
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+              {tiers.map((tier, i) => (
+                <div
+                  key={i}
+                  className={`glass-card ${tier.style} rounded-2xl p-7 relative flex flex-col ${
+                    tier.featured ? 'ring-1 ring-slate-400/30' : ''
+                  }`}
+                >
+                  {tier.featured && (
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                      <span className="text-xs font-semibold text-black bg-slate-300 px-3 py-1 rounded-full">
+                        Top Tier
+                      </span>
+                    </div>
+                  )}
+                  <div className="mb-5">
+                    <h3
+                      className={`text-xl font-bold mb-1 ${tier.labelColor}`}
+                      style={{ fontFamily: 'var(--font-space)' }}
+                    >
+                      {tier.name}
+                    </h3>
+                    <p className={`text-sm font-semibold ${tier.amountColor}`}>{tier.amount}</p>
+                  </div>
+                  <ul className="space-y-2.5 flex-1">
+                    {tier.benefits.map((b, j) => (
+                      <li key={j} className="flex items-start gap-2.5 text-sm text-slate-400">
+                        <Check size={14} className="text-red-400 mt-0.5 shrink-0" />
+                        {b}
+                      </li>
                     ))}
                   </ul>
                 </div>
               ))}
             </div>
           </div>
+        </section>
 
-          <div className="text-center">
-            <h2 className="text-3xl font-bold mb-8 text-navy">Become a Sponsor Today</h2>
-            <p className="text-lg mb-8 text-slate-600">Join us in shaping the future of autonomous vehicles and supporting the next generation of innovators.</p>
-            <Button asChild variant="secondary" size="sm">
-              <a href="mailto:contact@atlasautoware.org">Become a Sponsor</a>
-            </Button>
+        {/* ── CTA ───────────────────────────────────────────── */}
+        <section className="py-24">
+          <div className="container mx-auto px-6 text-center">
+            <h2
+              className="text-3xl md:text-4xl font-bold text-white mb-5"
+              style={{ fontFamily: 'var(--font-space)' }}
+            >
+              Become a Sponsor Today
+            </h2>
+            <p className="text-slate-400 max-w-xl mx-auto mb-10 leading-relaxed">
+              Ready to partner with us? Reach out and we&apos;ll get back to you with a sponsorship
+              package tailored to your goals.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <a href="mailto:contact@atlasautoware.org" className="btn-primary">
+                Contact Us
+              </a>
+              <a
+                href="https://www.paypal.com/donate?hosted_button_id=88VLJ6TS6554Q"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline"
+              >
+                Donate via PayPal
+              </a>
+            </div>
           </div>
-        </div>
+        </section>
       </main>
 
-      <footer className="bg-navy text-white py-8">
-        <div className="container mx-auto px-4 flex justify-between items-center">
-          <div className="flex items-center space-x-2">
-            <Image src="/logo.png" alt="Atlas Autoware Logo" width={30} height={30} />
-            <p>&copy; 2024 AtlasAutoware - A 501(c)(3) Non-Profit Organization. All rights reserved</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
-
