@@ -5,7 +5,6 @@ import { remark } from 'remark'
 import html from 'remark-html'
 
 const articlesDirectory = path.join(process.cwd(), 'content/articles')
-const processedFiles = new Set<string>() // Cache to track processed files
 
 export interface ArticleMetadata {
   title: string
@@ -16,64 +15,54 @@ export interface ArticleMetadata {
   slug: string
 }
 
-function incrementDateIfNotProcessed(date: string, slug: string): string {
-  if (!processedFiles.has(slug)) {
-    const newDate = new Date(date)
-    newDate.setDate(newDate.getDate() + 1)
-    processedFiles.add(slug)
-    return newDate.toISOString().split('T')[0] // Returns YYYY-MM-DD format
-  }
-  return date
-}
-
 export async function getArticleData(slug: string) {
-  // Remove the timestamp from the slug to find the correct file
-  const originalSlug = slug.split('-').slice(0, -1).join('-')
-  let fullPath = path.join(articlesDirectory, `${originalSlug}.md`)
+  let fullPath = path.join(articlesDirectory, `${slug}.md`)
   if (!fs.existsSync(fullPath)) {
-    fullPath = path.join(articlesDirectory, `${originalSlug}.mdx`)
+    fullPath = path.join(articlesDirectory, `${slug}.mdx`)
   }
   if (!fs.existsSync(fullPath)) {
-    throw new Error(`Article file not found: ${originalSlug}`)
+    throw new Error(`Article not found: ${slug}`)
   }
-  const fileContents = fs.readFileSync(fullPath, 'utf8')
 
+  const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
-  const processedContent = await remark()
-    .use(html)
-    .process(content)
-  
-  const htmlContent = processedContent.toString()
-  data.date = incrementDateIfNotProcessed(data.date, originalSlug)
+  const processedContent = await remark().use(html).process(content)
 
   return {
     slug,
-    htmlContent,
-    ...(data as Omit<ArticleMetadata, 'slug'>)
+    htmlContent: processedContent.toString(),
+    ...(data as Omit<ArticleMetadata, 'slug'>),
   }
 }
 
-export function getAllArticles() {
+export function getAllArticles(): ArticleMetadata[] {
   const fileNames = fs.readdirSync(articlesDirectory)
-  const allArticlesData = fileNames
-    .filter(fileName => fileName.endsWith('.md') || fileName.endsWith('.mdx'))
+  const seen = new Set<string>()
+
+  // Sort so .md files are processed before .mdx (prefer .md when both exist)
+  const sorted = [...fileNames].sort((a, b) => {
+    if (a.endsWith('.md') && b.endsWith('.mdx')) return -1
+    if (a.endsWith('.mdx') && b.endsWith('.md')) return 1
+    return a.localeCompare(b)
+  })
+
+  const articles = sorted
+    .filter((f) => f.endsWith('.md') || f.endsWith('.mdx'))
     .map((fileName) => {
       const slug = fileName.replace(/\.(md|mdx)$/, '')
+      if (seen.has(slug)) return null
+      seen.add(slug)
+
       const fullPath = path.join(articlesDirectory, fileName)
       const fileContents = fs.readFileSync(fullPath, 'utf8')
       const { data } = matter(fileContents)
-      
-      data.date = incrementDateIfNotProcessed(data.date, slug)
-
-      // Ensure unique slug by appending a timestamp if needed
-      const uniqueSlug = `${slug}-${Date.now()}`
 
       return {
-        slug: uniqueSlug,
-        ...(data as Omit<ArticleMetadata, 'slug'>)
+        slug,
+        ...(data as Omit<ArticleMetadata, 'slug'>),
       }
     })
+    .filter(Boolean) as ArticleMetadata[]
 
-  return allArticlesData.sort((a, b) => (a.date < b.date ? 1 : -1))
+  return articles.sort((a, b) => (a.date < b.date ? 1 : -1))
 }
-
