@@ -45,7 +45,7 @@ const departments = [
   {
     id: 'Leadership',
     label: 'Leadership',
-    description: 'The executive team steering Atlas Autoware\'s vision and operations.',
+    description: "The executive team steering Atlas Autoware's vision and operations.",
   },
   {
     id: 'Technology',
@@ -56,16 +56,16 @@ const departments = [
 
 export default function Members() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#030305]">
+    <div className="min-h-screen flex flex-col bg-[var(--bg-base)]">
       <Navbar />
 
       <main className="flex-grow pt-24">
-        {/* ── Header ───────────────────────────────────────── */}
+        {/* Header */}
         <div className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 dot-grid opacity-30" />
           <div className="absolute inset-0 red-glow-bg" />
           <div className="container mx-auto px-6 text-center relative z-10">
-            <p className="text-xs font-semibold text-red-400 uppercase tracking-widest mb-4 animate-fade-in">
+            <p className="text-xs font-semibold text-red-600 dark:text-red-400 uppercase tracking-widest mb-4 animate-fade-in">
               The Team
             </p>
             <h1
@@ -74,13 +74,13 @@ export default function Members() {
             >
               Our Members
             </h1>
-            <p className="text-slate-400 text-lg max-w-xl mx-auto animate-slide-up delay-200">
+            <p className="text-slate-600 dark:text-slate-400 text-lg max-w-xl mx-auto animate-slide-up delay-200">
               Meet the passionate students driving autonomous vehicle innovation at TJHSST.
             </p>
           </div>
         </div>
 
-        {/* ── Departments ───────────────────────────────────── */}
+        {/* Departments */}
         <section className="py-20">
           <div className="container mx-auto px-6">
             {departments.map((dept) => {
@@ -91,7 +91,7 @@ export default function Members() {
                   <div className="flex items-center gap-4 mb-3">
                     <div className="w-1 h-8 rounded-full bg-gradient-to-b from-red-500 to-red-800" />
                     <h2
-                      className="text-2xl md:text-3xl font-bold text-white"
+                      className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white"
                       style={{ fontFamily: 'var(--font-space)' }}
                     >
                       {dept.label}
@@ -105,23 +105,23 @@ export default function Members() {
                         key={i}
                         className="glass-card rounded-2xl overflow-hidden group transition-all duration-300 hover:-translate-y-1"
                       >
-                        <div className="relative h-72 overflow-hidden bg-[#141420]">
+                        <div className="relative h-72 overflow-hidden bg-[var(--bg-elevated)]">
                           <Image
                             src={member.image}
                             alt={member.name}
                             fill
                             className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d12] via-transparent to-transparent" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-surface)] via-transparent to-transparent" />
                         </div>
                         <div className="p-6">
                           <h3
-                            className="text-lg font-bold text-white mb-1"
+                            className="text-lg font-bold text-gray-900 dark:text-white mb-1"
                             style={{ fontFamily: 'var(--font-space)' }}
                           >
                             {member.name}
                           </h3>
-                          <p className="text-sm text-red-400 font-medium">{member.role}</p>
+                          <p className="text-sm text-red-600 dark:text-red-400 font-medium">{member.role}</p>
                         </div>
                       </div>
                     ))}
@@ -132,16 +132,16 @@ export default function Members() {
           </div>
         </section>
 
-        {/* ── Join CTA ──────────────────────────────────────── */}
-        <section className="py-20 bg-[#0d0d12]">
+        {/* Join CTA */}
+        <section className="py-20 bg-[var(--bg-surface)]">
           <div className="container mx-auto px-6 text-center">
             <h2
-              className="text-3xl font-bold text-white mb-4"
+              className="text-3xl font-bold text-gray-900 dark:text-white mb-4"
               style={{ fontFamily: 'var(--font-space)' }}
             >
               Interested in joining?
             </h2>
-            <p className="text-slate-400 mb-8 max-w-lg mx-auto">
+            <p className="text-slate-600 dark:text-slate-400 mb-8 max-w-lg mx-auto">
               We&apos;re always looking for passionate TJHSST students excited about robotics, AI,
               and autonomous vehicles.
             </p>
