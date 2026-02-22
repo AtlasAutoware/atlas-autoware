@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Main disc -->
+  <circle cx="50" cy="50" r="48" fill="black"/>
+
+  <!-- 4 film-reel holes (N/E/S/W) -->
+  <circle cx="50" cy="14" r="9.5" fill="white"/>
+  <circle cx="86" cy="50" r="9.5" fill="white"/>
+  <circle cx="50" cy="86" r="9.5" fill="white"/>
+  <circle cx="14" cy="50" r="9.5" fill="white"/>
+
+  <!-- Bear: ears -->
+  <circle cx="40" cy="34" r="6.5" fill="white"/>
+  <circle cx="60" cy="34" r="6.5" fill="white"/>
+
+  <!-- Bear: head -->
+  <circle cx="50" cy="45" r="13.5" fill="white"/>
+
+  <!-- Bear: body -->
+  <ellipse cx="50" cy="65" rx="10" ry="9" fill="white"/>
+
+  <!-- Bear: arms reaching out on wheel -->
+  <ellipse cx="34" cy="63" rx="6.5" ry="4" fill="white" transform="rotate(-20 34 63)"/>
+  <ellipse cx="66" cy="63" rx="6.5" ry="4" fill="white" transform="rotate(20 66 63)"/>
+
+  <!-- Bear face: eyes -->
+  <circle cx="45.5" cy="43" r="2.2" fill="black"/>
+  <circle cx="54.5" cy="43" r="2.2" fill="black"/>
+
+  <!-- Bear face: nose -->
+  <ellipse cx="50" cy="48.5" rx="2" ry="1.5" fill="black"/>
+</svg>

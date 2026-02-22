@@ -40,16 +40,16 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
         onClick={() => setOpen((o) => !o)}
         className="w-full flex items-center justify-between p-6 text-left gap-4"
       >
-        <span className="font-semibold text-white leading-snug" style={{ fontFamily: 'var(--font-space)' }}>
+        <span className="font-semibold text-gray-900 dark:text-white leading-snug" style={{ fontFamily: 'var(--font-space)' }}>
           {question}
         </span>
         <ChevronDown
           size={18}
-          className={`shrink-0 text-red-400 transition-transform duration-300 ${open ? 'rotate-180' : ''}`}
+          className={`shrink-0 text-red-500 dark:text-red-400 transition-transform duration-300 ${open ? 'rotate-180' : ''}`}
         />
       </button>
       {open && (
-        <div className="px-6 pb-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/[0.06]">
+        <div className="px-6 pb-6 pt-0 text-slate-600 dark:text-slate-400 text-sm leading-relaxed border-t border-black/[0.06] dark:border-white/[0.06]">
           <div className="pt-4">{answer}</div>
         </div>
       )}
