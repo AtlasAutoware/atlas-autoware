@@ -30,9 +30,10 @@ export function Navbar() {
 
   return (
     <nav
+      style={scrolled || isOpen ? { background: 'var(--navbar-bg)' } : undefined}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || isOpen
-          ? 'bg-white/95 dark:bg-[#030305]/92 backdrop-blur-xl border-b border-black/[0.06] dark:border-white/[0.06] shadow-lg shadow-black/5 dark:shadow-2xl dark:shadow-black/40'
+          ? 'backdrop-blur-xl border-b border-[var(--border)] shadow-lg shadow-black/10'
           : 'bg-transparent'
       }`}
     >
