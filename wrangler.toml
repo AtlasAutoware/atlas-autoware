@@ -1,5 +1,7 @@
 name = "atlas-autoware"
 compatibility_date = "2024-09-23"
+main = ".worker.js"
 
 [assets]
 directory = "out"
+not_found_handling = "single-page-application"
