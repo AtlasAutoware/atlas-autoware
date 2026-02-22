@@ -9,6 +9,11 @@ export const metadata: Metadata = {
   description:
     'The premier high school-led self-driving car team — the first and only high school team competing in F1 Tenth.',
   keywords: ['autonomous vehicles', 'self-driving car', 'robotics', 'AI', 'TJHSST', 'F1 Tenth'],
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

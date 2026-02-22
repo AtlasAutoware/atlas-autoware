@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { ArrowRight, Cpu, GraduationCap, Users, Trophy } from 'lucide-react'
 import { Navbar } from '../components/Navbar'
 import { Footer } from '../components/Footer'
-import { getAllArticles } from '../lib/markdown'
 
 const stats = [
   { value: '#1', label: 'High School F1 Tenth Team' },
@@ -34,8 +33,6 @@ const pillars = [
 ]
 
 export default function Home() {
-  const articles = getAllArticles().slice(0, 2)
-
   return (
     <div className="min-h-screen flex flex-col bg-[#030305]">
       <Navbar />
@@ -80,9 +77,6 @@ export default function Home() {
           <div className="flex flex-wrap gap-4 justify-center animate-slide-up delay-300">
             <Link href="/about" className="btn-primary">
               Learn More <ArrowRight size={16} />
-            </Link>
-            <Link href="/articles" className="btn-outline">
-              Read Articles
             </Link>
           </div>
         </div>
@@ -175,67 +169,6 @@ export default function Home() {
                 Our Story <ArrowRight size={16} />
               </Link>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Latest Articles ───────────────────────────────────── */}
-      <section className="py-28">
-        <div className="container mx-auto px-6">
-          <h2 className="section-title title-gradient">Latest Articles</h2>
-          <p className="section-subtitle">
-            Deep dives into autonomous vehicle technology, AI research, and team updates.
-          </p>
-
-          {articles.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-              {articles.map((article) => (
-                <Link
-                  href={`/articles/${article.slug}`}
-                  key={article.slug}
-                  className="glass-card rounded-2xl overflow-hidden group block transition-all duration-300 hover:-translate-y-1"
-                >
-                  <div className="relative h-52 overflow-hidden bg-[#141420]">
-                    <Image
-                      src={article.image || '/placeholder.jpg'}
-                      alt={article.title}
-                      fill
-                      className="object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d12] via-transparent to-transparent" />
-                  </div>
-                  <div className="p-7">
-                    <h3
-                      className="text-lg font-bold text-white mb-2 group-hover:text-red-400 transition-colors leading-snug"
-                      style={{ fontFamily: 'var(--font-space)' }}
-                    >
-                      {article.title}
-                    </h3>
-                    <p className="text-slate-400 text-sm mb-5 leading-relaxed line-clamp-2">
-                      {article.description}
-                    </p>
-                    <div className="flex justify-between text-xs text-slate-500">
-                      <span>{article.author}</span>
-                      <time>
-                        {new Date(article.date).toLocaleDateString('en-US', {
-                          year: 'numeric',
-                          month: 'long',
-                          day: 'numeric',
-                        })}
-                      </time>
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          ) : (
-            <p className="text-center text-slate-500 mb-12">No articles yet — check back soon.</p>
-          )}
-
-          <div className="text-center">
-            <Link href="/articles" className="btn-outline">
-              View All Articles <ArrowRight size={16} />
-            </Link>
           </div>
         </div>
       </section>

@@ -10,39 +10,33 @@ export const metadata: Metadata = {
 
 const teamMembers = [
   {
-    name: 'Vrishak Vemuri',
-    role: 'Co-President',
-    image: '/assets/img/team/officers/459212774_534453352273716_5818706977539410234_n.jpg',
-    department: 'Leadership',
-  },
-  {
     name: 'Eshan Iyer',
-    role: 'Co-President',
+    role: 'President',
     image: '/assets/img/team/officers/IMG_1311.webp',
     department: 'Leadership',
   },
   {
-    name: 'Logan Bradley',
-    role: 'Secretary',
-    image: '/assets/img/team/officers/IMG_1308.webp',
+    name: 'Aarav Maram',
+    role: 'Vice President',
+    image: '/assets/img/team/officers/IMG_1315.jpg',
     department: 'Leadership',
   },
   {
-    name: 'Aarav Maram',
-    role: 'Treasurer & Engineering Lead',
-    image: '/assets/img/team/officers/IMG_1315.jpg',
-    department: 'Engineering',
+    name: 'Aneesh Pabolu',
+    role: 'Secretary',
+    image: '/placeholder-user.jpg',
+    department: 'Leadership',
+  },
+  {
+    name: 'Eshan Gillani',
+    role: 'Outreach Lead',
+    image: '/placeholder-user.jpg',
+    department: 'Leadership',
   },
   {
     name: 'Michael Yaroschuk',
-    role: 'Web Master',
-    image: '/assets/img/team/officers/458374250_1519871045589682_7325685962597737582_n.jpg',
-    department: 'Technology',
-  },
-  {
-    name: 'Parasmai Salunkhe',
     role: 'CS Lead',
-    image: '/assets/img/team/Parasmai.webp',
+    image: '/assets/img/team/officers/458374250_1519871045589682_7325685962597737582_n.jpg',
     department: 'Technology',
   },
 ]
@@ -52,11 +46,6 @@ const departments = [
     id: 'Leadership',
     label: 'Leadership',
     description: 'The executive team steering Atlas Autoware\'s vision and operations.',
-  },
-  {
-    id: 'Engineering',
-    label: 'Engineering',
-    description: 'Hardware wizards designing and building our autonomous race car.',
   },
   {
     id: 'Technology',

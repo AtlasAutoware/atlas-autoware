@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { Check } from 'lucide-react'
 import { Navbar } from '../../components/Navbar'
 import { Footer } from '../../components/Footer'
@@ -114,6 +115,35 @@ export default function Sponsorship() {
             </p>
           </div>
         </div>
+
+        {/* ── Current Sponsors ──────────────────────────────── */}
+        <section className="py-24">
+          <div className="container mx-auto px-6">
+            <p className="text-xs font-semibold text-red-400 uppercase tracking-widest mb-3 text-center">
+              Our Partners
+            </p>
+            <h2
+              className="text-3xl md:text-4xl font-bold text-white text-center mb-14"
+              style={{ fontFamily: 'var(--font-space)' }}
+            >
+              Current Sponsors
+            </h2>
+
+            <div className="flex flex-wrap justify-center gap-8">
+              <div className="glass-card rounded-2xl p-8 flex flex-col items-center justify-center gap-4 min-w-[220px]">
+                <div className="relative w-48 h-24">
+                  <Image
+                    src="/sponsors/atlas-gc-logo.png"
+                    alt="Atlas General Contractors"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <p className="text-sm text-slate-400 font-medium">Atlas General Contractors</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* ── Why sponsor ───────────────────────────────────── */}
         <section className="py-24">
