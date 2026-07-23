@@ -141,35 +141,28 @@ export default function Sponsorship() {
                 </div>
                 <p className="text-sm text-slate-500 font-medium">Atlas General Contractors</p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Why sponsor */}
-        <section className="py-24">
-          <div className="container mx-auto px-6">
-            <p className="text-xs font-semibold text-red-600 dark:text-red-400 uppercase tracking-widest mb-3 text-center">
-              Why Partner With Us
-            </p>
-            <h2
-              className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white text-center mb-14"
-              style={{ fontFamily: 'var(--font-space)' }}
-            >
-              Why Sponsor Atlas Autoware?
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              {whySponsors.map((item, i) => (
-                <div key={i} className="glass-card rounded-2xl p-8">
-                  <h3
-                    className="text-lg font-bold text-gray-900 dark:text-white mb-3"
-                    style={{ fontFamily: 'var(--font-space)' }}
-                  >
-                    {item.title}
-                  </h3>
-                  <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{item.description}</p>
+              <div className="glass-card rounded-2xl p-8 flex flex-col items-center justify-center gap-4 min-w-[220px]">
+                <div className="relative w-48 h-24">
+                  <Image
+                    src="/sponsors/progressiverc.png"
+                    alt="ProgressiveRC"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
-              ))}
+                <p className="text-sm text-slate-500 font-medium">ProgressiveRC</p>
+              </div>
+              <div className="glass-card rounded-2xl p-8 flex flex-col items-center justify-center gap-4 min-w-[220px]">
+                <div className="relative w-48 h-24">
+                  <Image
+                    src="/sponsors/pixy-charmedlabs.png"
+                    alt="Pixy · Charmed Labs"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <p className="text-sm text-slate-500 font-medium">Pixy · Charmed Labs</p>
+              </div>
             </div>
           </div>
         </section>
@@ -219,6 +212,35 @@ export default function Sponsorship() {
                       </li>
                     ))}
                   </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why sponsor */}
+        <section className="py-24">
+          <div className="container mx-auto px-6">
+            <p className="text-xs font-semibold text-red-600 dark:text-red-400 uppercase tracking-widest mb-3 text-center">
+              Why Partner With Us
+            </p>
+            <h2
+              className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white text-center mb-14"
+              style={{ fontFamily: 'var(--font-space)' }}
+            >
+              Why Sponsor Atlas Autoware?
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              {whySponsors.map((item, i) => (
+                <div key={i} className="glass-card rounded-2xl p-8">
+                  <h3
+                    className="text-lg font-bold text-gray-900 dark:text-white mb-3"
+                    style={{ fontFamily: 'var(--font-space)' }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">{item.description}</p>
                 </div>
               ))}
             </div>
