@@ -9,10 +9,16 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as IndexRouteImport } from './routes/index'
 import { Route as DonateRouteImport } from './routes/donate'
 import { Route as HomeRouteImport } from './routes/home'
 import { Route as TheCarRouteImport } from './routes/the-car'
 
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DonateRoute = DonateRouteImport.update({
   id: '/donate',
   path: '/donate',
@@ -30,30 +36,34 @@ const TheCarRoute = TheCarRouteImport.update({
 } as any)
 
 export interface FileRoutesByFullPath {
+  '/': typeof IndexRoute
   '/donate': typeof DonateRoute
   '/home': typeof HomeRoute
   '/the-car': typeof TheCarRoute
 }
 export interface FileRoutesByTo {
+  '/': typeof IndexRoute
   '/donate': typeof DonateRoute
   '/home': typeof HomeRoute
   '/the-car': typeof TheCarRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
   '/donate': typeof DonateRoute
   '/home': typeof HomeRoute
   '/the-car': typeof TheCarRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/donate' | '/home' | '/the-car'
+  fullPaths: '/' | '/donate' | '/home' | '/the-car'
   fileRoutesByTo: FileRoutesByTo
-  to: '/donate' | '/home' | '/the-car'
-  id: '__root__' | '/donate' | '/home' | '/the-car'
+  to: '/' | '/donate' | '/home' | '/the-car'
+  id: '__root__' | '/' | '/donate' | '/home' | '/the-car'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
+  IndexRoute: typeof IndexRoute
   DonateRoute: typeof DonateRoute
   HomeRoute: typeof HomeRoute
   TheCarRoute: typeof TheCarRoute
@@ -61,6 +71,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/donate': {
       id: '/donate'
       path: '/donate'
@@ -86,6 +103,7 @@ declare module '@tanstack/react-router' {
 }
 
 const rootRouteChildren: RootRouteChildren = {
+  IndexRoute: IndexRoute,
   DonateRoute: DonateRoute,
   HomeRoute: HomeRoute,
   TheCarRoute: TheCarRoute,
