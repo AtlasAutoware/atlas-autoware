@@ -19,6 +19,8 @@ import allgoLogo from "@/assets/AllgoRhythm_img.png";
 import rabLogo from "@/assets/rab.png";
 import bachtorockLogo from "@/assets/bachtorock.png";
 import hiticLogo from "@/assets/Hitc.png";
+import orbbecLogo from "@/assets/orbbec-logo.png";
+import injoraLogo from "@/assets/injora-logo.png";
 
 export const Route = createFileRoute("/home")({
   head: () => ({
@@ -797,6 +799,28 @@ function Supporters() {
                   </div>
                   <span className="text-xs font-semibold text-amber-700 bg-amber-600/10 px-3 py-1.5 rounded-full border border-amber-600/30">They gave us hardware too!</span>
                 </a>
+                  <a
+                    href="https://www.orbbec.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 block rounded-2xl border-2 border-amber-600/30 bg-white p-6 h-[200px] flex flex-col items-end justify-end transition-all duration-300 hover:-translate-y-1 hover:border-amber-600 hover:shadow-[0_0_32px_rgba(217,119,6,0.35)]"
+                  >
+                    <div className="w-full flex items-center justify-center mb-6">
+                      <img src={orbbecLogo} alt="Orbbec" className="max-h-24 w-auto object-contain" />
+                    </div>
+                    <span className="text-xs font-semibold text-amber-700 bg-amber-600/10 px-3 py-1.5 rounded-full border border-amber-600/30">They gave us hardware too!</span>
+                  </a>
+                  <a
+                    href="https://www.injora.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 block rounded-2xl border-2 border-amber-600/30 bg-white p-6 h-[200px] flex flex-col items-end justify-end transition-all duration-300 hover:-translate-y-1 hover:border-amber-600 hover:shadow-[0_0_32px_rgba(217,119,6,0.35)]"
+                  >
+                    <div className="w-full flex items-center justify-center mb-6">
+                      <img src={injoraLogo} alt="INJORA" className="max-h-24 w-auto object-contain" />
+                    </div>
+                    <span className="text-xs font-semibold text-amber-700 bg-amber-600/10 px-3 py-1.5 rounded-full border border-amber-600/30">They gave us hardware too!</span>
+                  </a>
               </div>
               <div className="text-center">
                 <a
