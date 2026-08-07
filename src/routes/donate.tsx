@@ -20,7 +20,7 @@ export const Route = createFileRoute("/donate")({
   head: () => ({
     meta: [
       { title: "Support Atlas Autoware" },
-      { name: "description", content: "Support Atlas Autoware — a student-led autonomous vehicle team. Donate or become a sponsor." },Z
+      { name: "description", content: "Support Atlas Autoware — a student-led autonomous vehicle team. Donate or become a sponsor." },
       { property: "og:title", content: "Support Atlas Autoware" },
       { property: "og:description", content: "Help keep our autonomous vehicle team running." },
     ],
