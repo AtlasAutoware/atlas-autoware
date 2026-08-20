@@ -236,12 +236,14 @@ function DonatePage() {
                   <span className="text-foreground">I confirm I am a U.S. resident and not a resident of any state listed above.</span>
                 </label>
 
-                <button
-                  type="button"
-                  className="mt-6 w-full rounded-full bg-brand hover:bg-brand-glow text-white py-4 font-semibold shadow-lg"
+                <a
+                  href={`https://www.paypal.com/donate?hosted_button_id=88VLJ6TS6554Q&amount=${encodeURIComponent(selectedAmount === 'custom' ? (customAmount || '0') : selectedAmount.replace(/[^0-9.]/g, ''))}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 flex w-full items-center justify-center rounded-full bg-brand hover:bg-brand-glow text-white py-4 font-semibold shadow-lg"
                 >
                   Give to Atlas Autoware &nbsp; ♥
-                </button>
+                </a>
 
                 <p className="mt-3 text-xs text-muted-foreground">
                   You'll complete your donation on PayPal, and PayPal will email you a receipt. Atlas Autoware is a registered 501(c)(3) nonprofit, so your donation is tax-deductible. Our EIN is 88-3747265.
@@ -502,11 +504,14 @@ function DonatePage() {
                       {tier.buttonLabel}
                     </a>
                   ) : (
-                    <button
+                    <a
+                      href={`https://www.paypal.com/donate?hosted_button_id=88VLJ6TS6554Q&amount=${encodeURIComponent(tier.amount.replace(/[^0-9.]/g, ''))}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`flex h-12 w-full items-center justify-center rounded-full px-5 text-sm font-semibold transition ${tier.primary ? 'btn-donate' : 'btn-ghost'}`}
                     >
                       {tier.buttonLabel}
-                    </button>
+                    </a>
                   )}
                 </div>
               </div>
