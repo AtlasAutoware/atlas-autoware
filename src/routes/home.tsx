@@ -19,6 +19,8 @@ import allgoLogo from "@/assets/AllgoRhythm_img.png";
 import rabLogo from "@/assets/rab.png";
 import bachtorockLogo from "@/assets/bachtorock.png";
 import hiticLogo from "@/assets/Hitc.png";
+import holmesHobbiesLogo from "@/assets/holmes-hobbies.png";
+import altitudeHobbiesLogo from "@/assets/altitude-hobbies.png";
 import orbbecLogo from "@/assets/orbbec-logo.png";
 import injoraLogo from "@/assets/injora-logo.png";
 
@@ -806,7 +808,7 @@ function Supporters() {
                   className="mt-4 block rounded-2xl border-2 border-amber-600/30 bg-white p-6 h-[200px] flex flex-col items-end justify-end transition-all duration-300 hover:-translate-y-1 hover:border-amber-600 hover:shadow-[0_0_32px_rgba(217,119,6,0.35)]"
                 >
                   <div className="w-full flex items-center justify-center mt-6 mb-2">
-                    <img src="https://holmeshobbies.com/media/logo/default/long-logo.png" alt="Holmes Hobbies" className="max-h-20 w-auto object-contain" />
+                    <img src={holmesHobbiesLogo} alt="Holmes Hobbies" className="max-h-20 w-auto object-contain" />
                   </div>
                   <span className="text-xs font-semibold text-amber-700 bg-amber-600/10 px-3 py-1.5 rounded-full border border-amber-600/30">They gave us hardware too!</span>
                 </a>
@@ -872,7 +874,7 @@ function Supporters() {
                   rel="noopener noreferrer"
                   className="mt-4 block rounded-2xl border-2 border-amber-600/30 bg-white p-6 h-[200px] flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:border-amber-600 hover:shadow-[0_0_32px_rgba(217,119,6,0.35)]"
                 >
-                  <img src="https://www.altitudehobbies.com/cdn/shop/files/altitude-drones-hobbies-website-logo-gif_e4881df8-e51f-491f-8ae2-015845736825.gif" alt="Altitude Hobbies" className="max-h-28 w-auto object-contain" />
+                  <img src={altitudeHobbiesLogo} alt="Altitude Hobbies" className="max-h-28 w-auto object-contain" />
                 </a>
               </div>
             </div>
