@@ -956,7 +956,7 @@ function Footer() {
           <div className="w-32 h-px bg-white/10" />
         </div>
         <div className="mt-4 text-sm text-muted-foreground text-center">
-          © {new Date().getFullYear()} Atlas Autoware · 501(c)(3) nonprofit · EIN 88-3747265
+          © {new Date().getFullYear()} Atlas Autoware · 501(c)(3) nonprofit · EIN 88-3747265 - Not affiliated with, endorsed by, or sponsored by the Autoware Foundation
         </div>
       </div>
     </footer>
