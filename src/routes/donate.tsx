@@ -15,6 +15,9 @@ import bachtorockLogo from "@/assets/bachtorock.png";
 import hiticLogo from "@/assets/Hitc.png";
 import orbbecLogo from "@/assets/orbbec-logo.png";
 import injoraLogo from "@/assets/injora-logo.png";
+import holmesHobbiesLogo from "@/assets/holmes-hobbies.png";
+import altitudeHobbiesLogo from "@/assets/altitude-hobbies.png";
+import hakkoLogo from "@/assets/hakko.jpg";
 
 export const Route = createFileRoute("/donate")({
   head: () => ({
@@ -418,6 +421,39 @@ function DonatePage() {
                   >
                     <div className="w-full flex items-center justify-center mb-6">
                       <img src={injoraLogo} alt="INJORA" className="max-h-24 w-auto object-contain" />
+                    </div>
+                    <span className="text-xs font-semibold text-amber-700 bg-amber-600/10 px-3 py-1.5 rounded-full border border-amber-600/30">They gave us hardware too!</span>
+                  </a>
+                  <a
+                    href="https://holmeshobbies.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 block rounded-2xl border-2 border-amber-600/30 bg-white p-6 h-[200px] flex flex-col items-end justify-end transition-all duration-300 hover:-translate-y-1 hover:border-amber-600 hover:shadow-[0_0_32px_rgba(217,119,6,0.35)]"
+                  >
+                    <div className="w-full flex items-center justify-center mb-6">
+                      <img src={holmesHobbiesLogo} alt="Holmes Hobbies" className="max-h-24 w-auto object-contain" />
+                    </div>
+                    <span className="text-xs font-semibold text-amber-700 bg-amber-600/10 px-3 py-1.5 rounded-full border border-amber-600/30">They gave us hardware too!</span>
+                  </a>
+                  <a
+                    href="https://www.altitudehobbies.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 block rounded-2xl border-2 border-amber-600/30 bg-white p-6 h-[200px] flex flex-col items-end justify-end transition-all duration-300 hover:-translate-y-1 hover:border-amber-600 hover:shadow-[0_0_32px_rgba(217,119,6,0.35)]"
+                  >
+                    <div className="w-full flex items-center justify-center mb-6">
+                      <img src={altitudeHobbiesLogo} alt="Altitude Hobbies" className="max-h-24 w-auto object-contain" />
+                    </div>
+                    <span className="text-xs font-semibold text-amber-700 bg-amber-600/10 px-3 py-1.5 rounded-full border border-amber-600/30">They gave us hardware too!</span>
+                  </a>
+                  <a
+                    href="https://www.hakkousa.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 block rounded-2xl border-2 border-amber-600/30 bg-white p-6 h-[200px] flex flex-col items-end justify-end transition-all duration-300 hover:-translate-y-1 hover:border-amber-600 hover:shadow-[0_0_32px_rgba(217,119,6,0.35)]"
+                  >
+                    <div className="w-full flex items-center justify-center mb-6">
+                      <img src={hakkoLogo} alt="Hakko" className="max-h-24 w-auto object-contain" />
                     </div>
                     <span className="text-xs font-semibold text-amber-700 bg-amber-600/10 px-3 py-1.5 rounded-full border border-amber-600/30">They gave us hardware too!</span>
                   </a>
