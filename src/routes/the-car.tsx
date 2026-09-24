@@ -1,22 +1,21 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowRight, Check } from "lucide-react";
 import { Nav } from "@/components/Nav";
+import { Footer } from "@/components/Footer";
+import { Backdrop, Eyebrow, SectionHeader } from "@/components/Section";
 
-import atlasLogo from "@/assets/atlas-logo.png";
 import rcCarPhoto from "@/assets/rc-car.png";
 
 export const Route = createFileRoute("/the-car")({
   head: () => ({
     meta: [
-      { title: "Atlas Autoware" },
+      { title: "The Car · Atlas Autoware" },
       {
         name: "description",
         content:
           "Atlas One is the self-driving car built by Atlas Autoware students. LiDAR, cameras, ROS 2, and drive-by-wire — made by high schoolers in Northern Virginia.",
       },
-      {
-        property: "og:title",
-        content: "Atlas Autoware",
-      },
+      { property: "og:title", content: "The Car · Atlas Autoware" },
       {
         property: "og:description",
         content:
@@ -29,63 +28,33 @@ export const Route = createFileRoute("/the-car")({
   component: TheCarPage,
 });
 
-function LogoMark() {
-  return (
-    <div className="relative w-8 h-8 rounded-lg bg-white grid place-items-center overflow-hidden">
-      <img
-        src={atlasLogo}
-        alt="Atlas Autoware logo"
-        className="w-7 h-7 object-contain"
-      />
-    </div>
-  );
-}
-
-function SectionLabel({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground">
-      <span className="w-6 h-px bg-brand" />
-      {children}
-    </div>
-  );
-}
-
 function Hero() {
   return (
-    <section className="relative pt-24 md:pt-36 pb-20 md:pb-28 overflow-hidden">
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 grid-lines opacity-30" />
-        <div className="hidden md:block absolute top-0 right-0 w-[800px] h-[600px] bg-brand/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/4" />
-      </div>
-
+    <section className="relative isolate pt-32 md:pt-40 pb-20 md:pb-28 overflow-hidden">
+      <Backdrop />
       <div className="mx-auto max-w-7xl px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <SectionLabel>The car</SectionLabel>
-          <h1 className="mt-6 text-5xl md:text-7xl font-semibold tracking-tight leading-[1.02] text-gradient">
+        <div className="max-w-3xl mx-auto text-center aa-slide-up">
+          <Eyebrow>The car</Eyebrow>
+          <h1 className="mt-3 text-5xl md:text-6xl font-bold tracking-tight leading-none aa-title-gradient">
             Atlas One
           </h1>
-          <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-            This is the thing we've been building. It's not pretty up close
-            (there's tape involved) but it drives itself around a track, and every
-            wire and line of code on it came from a student.
+          <p className="mt-6 aa-lead md:text-xl mx-auto">
+            This is the thing we've been building. It's not pretty up close (there's tape involved)
+            but it drives itself around a track, and every wire and line of code on it came from a
+            student.
           </p>
         </div>
 
         <div className="mt-14 relative max-w-5xl mx-auto">
-          <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-brand/20 via-brand-glow/10 to-transparent blur-3xl" />
-          <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-elegant">
-            <img
-              src={rcCarPhoto}
-              alt="Image loading"
-              loading="lazy"
-              className="w-full h-auto"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+          <div className="aa-glow-orb -left-10 -top-10" aria-hidden="true" />
+          <div className="relative rounded-2xl overflow-hidden border border-line shadow-[0_24px_80px_-24px_rgba(220,38,38,0.35)]">
+            <img src={rcCarPhoto} alt="Atlas One, our autonomous car" className="w-full h-auto" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/40 border border-white/10 text-sm text-muted-foreground">
-                <span className="w-2 h-2 rounded-full bg-brand animate-pulse" />
+              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/60 border border-white/10 text-sm font-medium text-white backdrop-blur">
+                <span className="aa-badge__dot" aria-hidden="true" />
                 The real thing, not a render
-              </div>
+              </span>
             </div>
           </div>
         </div>
@@ -115,8 +84,6 @@ function WhatsOnIt() {
       date: "Jun '26",
       title: "IEEE Intelligent Vehicles Symposium 2026",
       desc: "We brought the car to IV 2026 in Detroit, our biggest stage yet. A hardware failure knocked us out before the finish, so it goes down as a DNF. It stings, but we learned a lot, and we're regrouping for our next RoboRacer round in Boston.",
-      link: "https://ieee-iv.org/2026/",
-      linkText: "Event page →",
       result: "DNF, hardware fault",
     },
     {
@@ -134,64 +101,56 @@ function WhatsOnIt() {
   ];
 
   return (
-    <section className="py-20 md:py-28 border-t border-white/10">
+    <section className="aa-band py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6 grid lg:grid-cols-12 gap-14 items-start">
         <div className="lg:col-span-6">
-          <SectionLabel>What's on it</SectionLabel>
-          <h2 className="mt-6 text-4xl md:text-5xl font-semibold tracking-tight text-gradient leading-[1.05]">
-            A spinning LiDAR, some cameras, a lot of zip ties, and a lot of hope.
-          </h2>
-          <p className="mt-6 text-muted-foreground leading-relaxed">
-            The short version: a LiDAR on top, a couple of cameras up front, an IMU for balance, and a GPU in the back running everything we wrote. Getting all of it to agree on what's happening at the same time was harder than any single piece.
+          <SectionHeader
+            eyebrow="What's on it"
+            title="A spinning LiDAR, some cameras, a lot of zip ties, and a lot of hope."
+          />
+          <p className="mt-6 text-ink-muted leading-relaxed">
+            The short version: a LiDAR on top, a couple of cameras up front, an IMU for balance, and
+            a GPU in the back running everything we wrote. Getting all of it to agree on what's
+            happening at the same time was harder than any single piece.
           </p>
-          <div className="mt-8 space-y-4">
+          <ul className="mt-8 space-y-5">
             {items.map((item) => (
-              <div key={item.title} className="flex gap-4">
-                <span className="inline-flex h-7 w-7 items-center justify-center rounded-2xl bg-brand/10 text-brand text-sm">✓</span>
+              <li key={item.title} className="flex gap-4">
+                <span className="aa-icon-tile aa-icon-tile--sm mt-0.5">
+                  <Check aria-hidden="true" />
+                </span>
                 <div>
-                  <div className="font-semibold">{item.title}</div>
-                  <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                  <div className="font-semibold text-ink">{item.title}</div>
+                  <p className="mt-1 text-sm text-ink-muted leading-relaxed">{item.desc}</p>
                 </div>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
         <div className="lg:col-span-6">
-          <div className="rounded-3xl px-8 pb-8 pt-0">
-            <SectionLabel>Where we've taken it</SectionLabel>
-            <h2 className="mt-6 text-4xl md:text-5xl font-semibold tracking-tight text-gradient leading-[1.05]">
-              How it's actually gone so far.
-            </h2>
-            <p className="mt-4 text-muted-foreground leading-relaxed">
-              We're a young team, so this isn't a wall of trophies. It's more like a list of times we showed up, learned a ton, and occasionally did really well. The honest version:
-            </p>
-            <div className="mt-10 space-y-6">
-              {events.map((event, i) => (
-                <div key={i} className="flex gap-5">
-                  <div className="flex flex-col items-center">
-                    <div className="w-3 h-3 rounded-full bg-brand" />
-                    {i < events.length - 1 && <div className="w-px h-28 bg-brand/30 mt-3" />}
-                  </div>
-                  <div>
-                    <div className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">
-                      {event.date}
-                    </div>
-                    <h3 className="mt-2 text-lg font-semibold tracking-tight">
-                      {event.title}
-                    </h3>
-                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                      {event.desc}
-                    </p>
-                    {event.result && (
-                      <div className="mt-3 inline-block text-xs font-medium px-3 py-1 rounded-full bg-brand/10 border border-brand/30 text-brand-glow">
-                        {event.result}
-                      </div>
-                    )}
-                  </div>
+          <SectionHeader eyebrow="Where we've taken it" title="How it's actually gone so far." />
+          <p className="mt-4 text-ink-muted leading-relaxed">
+            We're a young team, so this isn't a wall of trophies. It's more like a list of times we
+            showed up, learned a ton, and occasionally did really well. The honest version:
+          </p>
+          <ol className="mt-10 space-y-6">
+            {events.map((event, i) => (
+              <li key={i} className="flex gap-5">
+                <div className="flex flex-col items-center pt-1.5">
+                  <div className="w-3 h-3 rounded-full bg-brand shadow-[0_0_12px_rgba(220,38,38,0.6)]" />
+                  {i < events.length - 1 && (
+                    <div className="w-px flex-1 min-h-24 bg-gradient-to-b from-brand/50 to-transparent mt-3" />
+                  )}
                 </div>
-              ))}
-            </div>
-          </div>
+                <div className="pb-2">
+                  <div className="aa-eyebrow !text-ink-subtle">{event.date}</div>
+                  <h3 className="mt-2 text-lg font-bold tracking-tight text-ink">{event.title}</h3>
+                  <p className="mt-2 text-sm text-ink-muted leading-relaxed">{event.desc}</p>
+                  <span className="mt-3 aa-badge aa-badge--sm">{event.result}</span>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </div>
     </section>
@@ -210,32 +169,25 @@ function SpecSheet() {
     { label: "Built by", value: "100% students" },
   ];
   return (
-    <section className="py-20 md:py-28 border-t border-white/10">
+    <section className="py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-5">
-            <SectionLabel>Under the hood</SectionLabel>
-            <h2 className="mt-6 text-4xl md:text-5xl font-semibold tracking-tight text-gradient leading-[1.05]">
-              Spec sheet
-            </h2>
-            <p className="mt-4 text-muted-foreground leading-relaxed">
-              The parts that actually matter. Nothing here is off the shelf magic, its just a lot of integration, tuning, and debugging.
+            <SectionHeader eyebrow="Under the hood" title="Spec Sheet" />
+            <p className="mt-4 text-ink-muted leading-relaxed">
+              The parts that actually matter. Nothing here is off-the-shelf magic, it's just a lot
+              of integration, tuning, and debugging.
             </p>
           </div>
           <div className="lg:col-span-7">
-            <div className="rounded-3xl border border-white/10 bg-surface/40 overflow-hidden">
-              {specs.map((s, i) => (
-                <div
-                  key={i}
-                  className="flex items-center justify-between py-5 px-6 md:px-8 border-b border-white/5 last:border-b-0"
-                >
-                  <span className="text-sm uppercase tracking-wider text-muted-foreground">
-                    {s.label}
-                  </span>
-                  <span className="font-medium text-foreground">{s.value}</span>
+            <dl className="aa-card overflow-hidden">
+              {specs.map((s) => (
+                <div key={s.label} className="aa-spec-row">
+                  <dt className="aa-eyebrow !text-ink-subtle">{s.label}</dt>
+                  <dd className="font-medium text-ink text-right">{s.value}</dd>
                 </div>
               ))}
-            </div>
+            </dl>
           </div>
         </div>
       </div>
@@ -267,35 +219,20 @@ function TheCode() {
     },
   ];
   return (
-    <section className="py-20 md:py-28 border-t border-white/10">
+    <section className="aa-band py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="max-w-3xl mx-auto text-center">
-          <SectionLabel>The code</SectionLabel>
-          <h2 className="mt-6 text-4xl md:text-5xl font-semibold tracking-tight text-gradient leading-[1.05]">
-            What happens between "
-            <span className="text-brand-glow">sees a cone</span>
-            " and "
-            <span className="text-brand-glow">doesn't hit it</span>
-            "
-          </h2>
-        </div>
+        <SectionHeader
+          center
+          className="max-w-3xl"
+          eyebrow="The code"
+          title={<>What happens between "sees a cone" and "doesn't hit it"</>}
+        />
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {steps.map((s, i) => (
-            <div
-              key={i}
-              className="group rounded-2xl p-6 md:p-8 bg-surface/60 border border-white/8 hover:border-brand/40 transition-all"
-            >
-              <div className="flex items-center gap-2">
-                <span className="text-lg md:text-xl font-semibold text-foreground">
-                  {s.n} -
-                </span>
-                <h3 className="text-xl font-semibold tracking-tight">
-                  {s.title}
-                </h3>
-              </div>
-              <p className="mt-3 text-muted-foreground leading-relaxed">
-                {s.desc}
-              </p>
+          {steps.map((s) => (
+            <div key={s.n} className="aa-card aa-card--hover p-6 md:p-8">
+              <div className="aa-display text-3xl font-bold aa-gradient-text">{s.n}</div>
+              <h3 className="mt-3 text-xl font-bold tracking-tight text-ink">{s.title}</h3>
+              <p className="mt-3 aa-card__body">{s.desc}</p>
             </div>
           ))}
         </div>
@@ -306,33 +243,22 @@ function TheCode() {
 
 function SupportCTA() {
   return (
-    <section className="py-20 md:py-28 border-t border-white/10">
+    <section className="relative isolate py-20 md:py-28 overflow-hidden">
+      <Backdrop dim />
       <div className="mx-auto max-w-7xl px-6 text-center">
-        <div className="inline-flex items-center justify-center gap-3 text-xs uppercase tracking-[0.2em] text-muted-foreground">
-          <span className="w-6 h-px bg-brand" />
-          If you're still reading
-        </div>
-        <h2 className="mt-6 text-4xl md:text-6xl font-semibold tracking-tight text-gradient max-w-3xl mx-auto leading-[1.1]">
-          Want to help the next version be better?
-        </h2>
-        <p className="mt-6 max-w-2xl mx-auto text-muted-foreground leading-relaxed">
-          Every upgrade (a sharper sensor, a faster GPU, a tank of gas to get to the next event) comes out of whatever we can scrape together. A little help goes a long way for a team our size.
-        </p>
-        <div className="mt-9 flex flex-wrap justify-center gap-3">
-          <Link to="/donate" className="btn-donate">
-            Chip In
-            <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none">
-              <path
-                d="M5 12h14M13 6l6 6-6 6"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+        <SectionHeader
+          center
+          className="max-w-3xl"
+          eyebrow="If you're still reading"
+          title="Want to Help the Next Version Be Better?"
+          lead="Every upgrade (a sharper sensor, a faster GPU, a tank of gas to get to the next event) comes out of whatever we can scrape together. A little help goes a long way for a team our size."
+        />
+        <div className="mt-9 flex flex-wrap justify-center gap-4">
+          <Link to="/donate" className="aa-btn aa-btn--primary">
+            Chip In <ArrowRight aria-hidden="true" />
           </Link>
-          <Link to="/home" className="btn-ghost">
-            Back home
+          <Link to="/home" className="aa-btn aa-btn--outline">
+            Back Home
           </Link>
         </div>
       </div>
@@ -340,60 +266,9 @@ function SupportCTA() {
   );
 }
 
-function Footer() {
-  return (
-    <footer className="border-t border-white/5 pt-20 pb-12">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="flex flex-col md:flex-row md:justify-between gap-10">
-          <div className="max-w-md">
-            <div className="flex items-center gap-3 flex-wrap">
-              <LogoMark />
-              <span className="text-lg font-semibold tracking-tight">Atlas Autoware</span>
-              <span className="text-sm text-muted-foreground">· Built by students</span>
-            </div>
-            <p className="mt-4 text-base text-muted-foreground leading-relaxed">
-              A student-led autonomous vehicle team based in Northern Virginia, composed of students from TJHSST. We design, build, and program our self-driving car from the ground up.
-            </p>
-          </div>
-          <div className="flex flex-col md:items-center gap-4 text-center">
-            <div className="text-foreground">
-              <div className="text-lg font-semibold tracking-tight">Explore</div>
-              <div className="mt-1 flex flex-wrap items-center justify-center gap-3 text-base text-muted-foreground">
-                <Link to="/home" className="hover:text-foreground transition-colors">Home</Link>
-                <span className="text-white/20">·</span>
-                <Link to="/the-car" className="hover:text-foreground transition-colors">The Car</Link>
-                <span className="text-white/20">·</span>
-                <Link to="/donate" className="hover:text-foreground transition-colors">Donate</Link>
-              </div>
-              <a href="mailto:contact@atlasautoware.org" className="mt-3 block text-base text-muted-foreground hover:text-foreground transition-colors">contact@atlasautoware.org</a>
-            </div>
-            <div className="flex items-center justify-center gap-5">
-              <a href="https://www.instagram.com/atlasautoware/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-foreground transition-colors">
-                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-              </a>
-              <a href="https://github.com/AtlasAutoware" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted-foreground hover:text-foreground transition-colors">
-                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12A11.5 11.5 0 008.36 22.9c.58.1.79-.25.79-.55v-2c-3.2.7-3.88-1.4-3.88-1.4-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.4-1.27.74-1.56-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.2-3.1-.12-.3-.52-1.48.11-3.08 0 0 .98-.32 3.2 1.18a11.1 11.1 0 015.83 0c2.22-1.5 3.2-1.18 3.2-1.18.63 1.6.23 2.78.11 3.08.75.81 1.2 1.84 1.2 3.1 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.06.78 2.15v3.19c0 .3.21.66.8.55A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
-              </a>
-              <a href="mailto:contact@atlasautoware.org" aria-label="Email" className="text-muted-foreground hover:text-foreground transition-colors">
-                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="mt-10 flex justify-center">
-          <div className="w-32 h-px bg-white/10" />
-        </div>
-        <div className="mt-4 text-sm text-muted-foreground text-center">
-          © {new Date().getFullYear()} Atlas Autoware · 501(c)(3) nonprofit · EIN 88-3747265 - Not affiliated with, endorsed by, or sponsored by the Autoware Foundation
-        </div>
-      </div>
-    </footer>
-  );
-}
-
 function TheCarPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-base text-ink">
       <Nav />
       <main>
         <Hero />

@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { Menu, Moon, Sun, X } from "lucide-react";
 import atlasLogo from "@/assets/atlas-logo.png";
 
 const navLinks: Array<[string, string]> = [
@@ -7,106 +8,125 @@ const navLinks: Array<[string, string]> = [
   ["The Car", "/the-car"],
 ];
 
+/** Brand mark + wordmark. The disc mark is inverted in the dark theme (see .aa-brand in styles.css). */
+export function Brand() {
+  return (
+    <Link to="/home" className="aa-brand">
+      <img src={atlasLogo} alt="" width={32} height={32} />
+      <span>Atlas Autoware</span>
+    </Link>
+  );
+}
+
+function ThemeToggle() {
+  const [isDark, setIsDark] = useState(true);
+
+  useEffect(() => {
+    setIsDark(document.documentElement.classList.contains("dark"));
+  }, []);
+
+  const toggle = () => {
+    const next = !isDark;
+    document.documentElement.classList.toggle("dark", next);
+    try {
+      localStorage.setItem("aa-theme", next ? "dark" : "light");
+    } catch {
+      /* storage unavailable: the choice lasts for this page view only */
+    }
+    setIsDark(next);
+  };
+
+  return (
+    <button
+      type="button"
+      className="aa-icon-btn"
+      onClick={toggle}
+      aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
+      title={isDark ? "Light theme" : "Dark theme"}
+    >
+      {isDark ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}
+    </button>
+  );
+}
+
 export function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   useEffect(() => {
     if (!menuOpen) return;
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setMenuOpen(false);
-      }
+      if (event.key === "Escape") setMenuOpen(false);
     };
     document.addEventListener("keydown", onKeyDown);
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [menuOpen]);
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50">
-      <div className="backdrop-blur-xl bg-background/70 border-b border-white/5">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <Link to="/home" className="flex items-center gap-2.5">
-            <div className="relative w-8 h-8 rounded-lg bg-white grid place-items-center overflow-hidden">
-              <img src={atlasLogo} alt="Atlas Autoware logo" className="w-7 h-7 object-contain" />
-            </div>
-            <span className="font-semibold tracking-tight text-foreground">Atlas Autoware</span>
-          </Link>
+    <header className={`aa-nav ${scrolled || menuOpen ? "aa-nav--scrolled" : ""}`}>
+      <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between gap-6">
+        <Brand />
 
-          <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
-            {navLinks.map(([label, href]) => (
-              <Link key={href} to={href} className="hover:text-foreground transition-colors">
-                {label}
-              </Link>
-            ))}
-          </nav>
-
-          <div className="flex items-center gap-3">
+        <nav className="hidden md:flex items-center gap-7" aria-label="Main">
+          {navLinks.map(([label, href]) => (
             <Link
-              to="/donate"
-              className="hidden md:inline-flex btn-donate text-sm !py-2 !px-4 inline-flex items-center gap-2"
+              key={href}
+              to={href}
+              className="aa-nav__link"
+              activeProps={{ className: "active", "aria-current": "page" }}
             >
-              Donate 🤍
+              {label}
             </Link>
-            <button
-              type="button"
-              className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-surface text-foreground shadow-sm shadow-black/10 transition hover:bg-surface-2"
-              aria-label="Open navigation menu"
-              aria-expanded={menuOpen}
-              onClick={() => setMenuOpen((open) => !open)}
-            >
-              <span className="sr-only">Toggle menu</span>
-              <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d={menuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
-              </svg>
-            </button>
-          </div>
+          ))}
+        </nav>
+
+        <div className="flex items-center gap-3">
+          <ThemeToggle />
+          <Link to="/donate" className="hidden md:inline-flex aa-btn aa-btn--primary aa-btn--sm">
+            Donate
+          </Link>
+          <button
+            type="button"
+            className="md:hidden aa-icon-btn"
+            aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((open) => !open)}
+          >
+            {menuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
+          </button>
         </div>
       </div>
 
       {menuOpen ? (
-        <div className="md:hidden fixed inset-0 z-40 bg-black/10 backdrop-blur-sm" onClick={() => setMenuOpen(false)}>
-          <div
-            className="absolute left-1/2 top-20 w-[min(92vw,20rem)] -translate-x-1/2 rounded-3xl border border-white/10 bg-background p-4 shadow-2xl"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2.5">
-                <div className="relative w-8 h-8 rounded-lg bg-white grid place-items-center overflow-hidden">
-                  <img src={atlasLogo} alt="Atlas Autoware logo" className="w-7 h-7 object-contain" />
-                </div>
-                <span className="font-semibold tracking-tight text-foreground">Atlas Autoware</span>
-              </div>
-              <button
-                type="button"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-surface text-foreground transition hover:bg-surface-2"
-                onClick={() => setMenuOpen(false)}
-              >
-                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-            <div className="mt-4 space-y-3">
-              {navLinks.map(([label, href]) => (
-                <Link
-                  key={href}
-                  to={href}
-                  className="block rounded-2xl border border-white/10 bg-surface px-4 py-3 text-base font-semibold text-foreground transition hover:border-white/20"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {label}
-                </Link>
-              ))}
+        <nav className="md:hidden border-t border-line px-6 pb-6 pt-3" aria-label="Mobile">
+          <div className="grid gap-1">
+            {navLinks.map(([label, href]) => (
               <Link
-                to="/donate"
-                className="block rounded-2xl btn-donate px-4 py-3 text-base font-semibold text-white text-center"
+                key={href}
+                to={href}
+                className="aa-mobile-link"
+                activeProps={{ className: "active", "aria-current": "page" }}
                 onClick={() => setMenuOpen(false)}
               >
-                Donate 🤍
+                {label}
               </Link>
-            </div>
+            ))}
           </div>
-        </div>
+          <Link
+            to="/donate"
+            className="mt-4 aa-btn aa-btn--primary aa-btn--block"
+            onClick={() => setMenuOpen(false)}
+          >
+            Donate
+          </Link>
+        </nav>
       ) : null}
     </header>
   );
