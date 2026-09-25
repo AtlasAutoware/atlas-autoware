@@ -4,7 +4,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { Backdrop, Eyebrow, SectionHeader } from "@/components/Section";
 
-import rcCarPhoto from "@/assets/rc-car.png";
+import carPhoto from "@/assets/atlas-car-lab.webp";
 
 export const Route = createFileRoute("/the-car")({
   head: () => ({
@@ -48,14 +48,13 @@ function Hero() {
         <div className="mt-14 relative max-w-5xl mx-auto">
           <div className="aa-glow-orb -left-10 -top-10" aria-hidden="true" />
           <div className="relative rounded-2xl overflow-hidden border border-line shadow-[0_24px_80px_-24px_rgba(220,38,38,0.35)]">
-            <img src={rcCarPhoto} alt="Atlas One, our autonomous car" className="w-full h-auto" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-            <div className="absolute bottom-6 left-6 md:bottom-10 md:left-10">
-              <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/60 border border-white/10 text-sm font-medium text-white backdrop-blur">
-                <span className="aa-badge__dot" aria-hidden="true" />
-                The real thing, not a render
-              </span>
-            </div>
+            <img
+              src={carPhoto}
+              alt="Our car in the lab, with the OAK-D camera and LiDAR on top"
+              width={1204}
+              height={677}
+              className="w-full h-auto"
+            />
           </div>
         </div>
       </div>
@@ -146,7 +145,7 @@ function WhatsOnIt() {
                   <div className="aa-eyebrow !text-ink-subtle">{event.date}</div>
                   <h3 className="mt-2 text-lg font-bold tracking-tight text-ink">{event.title}</h3>
                   <p className="mt-2 text-sm text-ink-muted leading-relaxed">{event.desc}</p>
-                  <span className="mt-3 aa-badge aa-badge--sm">{event.result}</span>
+                  <p className="mt-3 text-sm font-semibold text-brand-text">{event.result}</p>
                 </div>
               </li>
             ))}

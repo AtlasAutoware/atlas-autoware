@@ -114,8 +114,8 @@ function DonatePage() {
                 to get to our next competition and build a second, better car. No salaries, no
                 overhead, we promise.
               </p>
-              <div className="mt-8 aa-badge">
-                <ShieldCheck className="w-4 h-4" aria-hidden="true" />
+              <div className="mt-8 inline-flex items-center gap-2 text-sm text-ink-muted">
+                <ShieldCheck className="w-4 h-4 text-brand-text" aria-hidden="true" />
                 Registered 501(c)(3) nonprofit · EIN 88-3747265 · tax-deductible
               </div>
             </div>

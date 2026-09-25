@@ -17,6 +17,8 @@ import { FundraisingProgress } from "@/components/Fundraising";
 
 import rcCarPhoto from "@/assets/rc-car.png";
 import carCutout from "@/assets/atlas-car-cutout.webp";
+import buildPhoto from "@/assets/car-build-bench.webp";
+import chassisPhoto from "@/assets/car-chassis-topdown.webp";
 import teamPhoto from "@/assets/2025_Team.png";
 
 export const Route = createFileRoute("/home")({
@@ -61,11 +63,7 @@ function Hero() {
 
       <div className="mx-auto max-w-7xl px-6 pt-16 pb-20 grid lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-6 aa-slide-up">
-          <span className="aa-badge">
-            <span className="aa-badge__dot" aria-hidden="true" />
-            Student-built · TJHSST · 501(c)(3)
-          </span>
-          <h1 className="mt-8 text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.04] text-ink">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.04] text-ink">
             We're high schoolers
             <br />
             <span className="aa-gradient-text">building a car</span>
@@ -202,8 +200,8 @@ function About() {
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-2xl overflow-hidden border border-line">
               <img
-                src={rcCarPhoto}
-                alt="Our car on the bench"
+                src={buildPhoto}
+                alt="Our car taken apart on the bench, with the Jetson, motor and deck plates laid out"
                 loading="lazy"
                 className="w-full h-full object-cover aspect-[5/6]"
               />
@@ -255,11 +253,7 @@ function RecentEvent() {
             <div className="text-xs text-ink-subtle mt-1">2026</div>
           </div>
           <div className="flex-1">
-            <span className="aa-badge aa-badge--sm">
-              <span className="aa-badge__dot" aria-hidden="true" />
-              Most recent
-            </span>
-            <h3 className="mt-3 text-2xl md:text-3xl font-bold tracking-tight text-ink">
+            <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-ink">
               IEEE Intelligent Vehicles Symposium 2026
             </h3>
             <p className="mt-3 text-ink-muted leading-relaxed max-w-2xl">
@@ -309,8 +303,8 @@ function WhyWeDoThis() {
         <div className="lg:col-span-6">
           <div className="relative rounded-2xl overflow-hidden border border-line aspect-[4/3]">
             <img
-              src={rcCarPhoto}
-              alt="Atlas Autoware car in the lab"
+              src={chassisPhoto}
+              alt="Top-down view of the chassis, wired up"
               loading="lazy"
               className="w-full h-full object-cover"
             />
@@ -394,10 +388,7 @@ function Projects() {
               ) : (
                 <div className="relative aspect-[4/3] overflow-hidden bg-elevated flex items-center justify-center">
                   <div className="absolute inset-0 aa-dot-grid" aria-hidden="true" />
-                  <span className="relative aa-badge">
-                    <span className="aa-badge__dot" aria-hidden="true" />
-                    In the works
-                  </span>
+                  <Car className="relative w-12 h-12 text-ink-subtle" aria-hidden="true" />
                 </div>
               )}
               <div className="p-6">
