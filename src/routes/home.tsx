@@ -16,6 +16,7 @@ import { SponsorWall } from "@/components/SponsorWall";
 import { FundraisingProgress } from "@/components/Fundraising";
 
 import rcCarPhoto from "@/assets/rc-car.png";
+import carCutout from "@/assets/atlas-car-cutout.webp";
 import teamPhoto from "@/assets/2025_Team.png";
 
 export const Route = createFileRoute("/home")({
@@ -56,16 +57,6 @@ function Hero() {
 
   return (
     <section id="top" className="relative isolate min-h-screen pt-24 overflow-hidden">
-      <div className="absolute inset-0 -z-20" aria-hidden="true">
-        <img
-          src={rcCarPhoto}
-          alt=""
-          width={1600}
-          height={901}
-          className="w-full h-full object-cover opacity-[0.15]"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-base" />
-      </div>
       <Backdrop />
 
       <div className="mx-auto max-w-7xl px-6 pt-16 pb-20 grid lg:grid-cols-12 gap-12 items-center">
@@ -96,29 +87,30 @@ function Hero() {
           </div>
         </div>
 
-        {/* Floating car with a single rotating capability chip */}
+        {/* Cut-out car floating over a red halo, with a single rotating capability chip */}
         <div className="lg:col-span-6 relative min-h-[420px] md:h-[640px] flex items-center justify-center">
           <div className="relative w-full max-w-[720px] aspect-[4/3]">
-            <div className="aa-glow-orb left-1/4 top-1/4" aria-hidden="true" />
+            <div className="aa-hero-halo" aria-hidden="true" />
+            <div className="aa-hero-ring" aria-hidden="true" />
+            <div className="aa-hero-ring aa-hero-ring--dashed" aria-hidden="true" />
+            <div className="aa-hero-floor" aria-hidden="true" />
             <div className="absolute inset-0 grid place-items-center">
               <div
-                className="relative w-full animate-float-slow"
+                className="relative w-[92%] animate-float-slow"
                 style={{ animationDuration: "3.2s" }}
               >
                 <img
-                  src={rcCarPhoto}
+                  src={carCutout}
                   alt="Atlas One, our autonomous car"
-                  className="w-full h-auto rounded-2xl border border-line shadow-[0_24px_80px_-24px_rgba(220,38,38,0.35)]"
-                />
-                <div
-                  className="absolute left-1/2 -translate-x-1/2 -bottom-6 w-[70%] h-4 rounded-full bg-black/50 blur-lg"
-                  aria-hidden="true"
+                  width={862}
+                  height={591}
+                  className="aa-hero-car w-full h-auto"
                 />
               </div>
             </div>
 
             <div
-              className="absolute w-48 -bottom-4 right-6 md:right-16 animate-float-slow"
+              className="absolute w-48 -bottom-12 left-2 md:-bottom-8 md:left-8 animate-float-slow"
               style={{ animationDuration: "3.2s" }}
             >
               <div

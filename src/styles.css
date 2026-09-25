@@ -311,6 +311,21 @@
 .aa-dot-grid { background-image: radial-gradient(circle, var(--aa-dot) 1px, rgba(0,0,0,0) 1px); background-size: var(--aa-dot-pitch) var(--aa-dot-pitch); }
 .aa-red-glow { background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(220, 38, 38, 0.14) 0%, rgba(220, 38, 38, 0) 65%); }
 .aa-glow-orb { position: absolute; width: 256px; height: 256px; border-radius: 9999px; background: var(--aa-red-tint); filter: blur(64px); pointer-events: none; }
+
+/* ── Hero car stage (cut-out car on a red halo) ──── */
+.aa-hero-halo { position: absolute; inset: 4% 6% 12% 6%; border-radius: 9999px; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(220, 38, 38, 0.30), rgba(220, 38, 38, 0.10) 55%, transparent 78%); filter: blur(24px); }
+.aa-hero-ring { position: absolute; left: 50%; top: 48%; width: 74%; aspect-ratio: 1; border-radius: 9999px; pointer-events: none;
+  transform: translate(-50%, -50%); border: 1px solid rgba(220, 38, 38, 0.28);
+  -webkit-mask-image: linear-gradient(to bottom, #000 35%, transparent 80%); mask-image: linear-gradient(to bottom, #000 35%, transparent 80%); }
+.aa-hero-ring--dashed { width: 90%; border: 1px dashed rgba(220, 38, 38, 0.22); animation: aa-spin 90s linear infinite; }
+.aa-hero-floor { position: absolute; left: 14%; right: 8%; top: 86%; height: 8%; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(15, 23, 42, 0.45), transparent); filter: blur(8px); }
+.dark .aa-hero-floor { background: radial-gradient(closest-side, rgba(220, 38, 38, 0.38), transparent); }
+.aa-hero-car { position: relative; filter: drop-shadow(0 22px 28px rgba(15, 23, 42, 0.28)); }
+.dark .aa-hero-car { filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.35)) drop-shadow(0 0 28px rgba(220, 38, 38, 0.35)); }
+@keyframes aa-spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .aa-hero-ring--dashed { animation: none; } }
 .aa-band { background: var(--aa-bg-surface); border-top: 1px solid var(--aa-border); border-bottom: 1px solid var(--aa-border); }
 
 /* ── Progress ────────────────────────────────────── */
