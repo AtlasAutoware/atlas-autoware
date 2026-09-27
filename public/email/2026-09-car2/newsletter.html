@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Atlas Autoware update: meet car 2</title>
+</head>
+<body style="margin:0;padding:0;background:#f1f1f3;">
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">Car 2 is designed: two circuit boards we laid out ourselves, a built-in battery pack and a carbon-fiber kit.</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#f1f1f3;">
+<tr><td align="center" style="padding:24px 12px;">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:600px;background:#ffffff;border-radius:16px;overflow:hidden;border:1px solid #e4e4e7;">
+
+<!-- Header -->
+<tr><td style="background:#030305;padding:22px 28px;">
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
+    <td style="vertical-align:middle;"><img src="https://raw.githubusercontent.com/AtlasAutoware/atlas-autoware/509f678/public/email/2026-09-car2/atlas-logo.png" width="36" height="36" alt="" style="display:block;border-radius:50%;background:#ffffff;"></td>
+    <td style="vertical-align:middle;padding-left:12px;font-family:'Space Grotesk',Arial,Helvetica,sans-serif;font-size:19px;font-weight:700;color:#ffffff;letter-spacing:-0.2px;">Atlas Autoware</td>
+  </tr></table>
+</td></tr>
+<tr><td style="height:4px;background:#dc2626;line-height:4px;font-size:0;">&nbsp;</td></tr>
+
+<!-- Intro -->
+<tr><td style="padding:32px 28px 8px;font-family:Inter,Helvetica,Arial,sans-serif;">
+  <p style="margin:0;font-size:12px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:#dc2626;">September 2026 update</p>
+  <h1 style="margin:10px 0 0;font-family:'Space Grotesk',Arial,Helvetica,sans-serif;font-size:32px;line-height:1.15;font-weight:700;color:#0a0a0f;letter-spacing:-0.5px;">Car 2 is designed.</h1>
+  <p style="margin:18px 0 0;font-size:16px;line-height:1.6;color:#3f3f46;">Hi everyone,</p>
+  <p style="margin:12px 0 0;font-size:16px;line-height:1.6;color:#3f3f46;">Last time I wrote about the power board we designed for our car. That idea kept growing. For our second car we've now designed all of the main electronics ourselves, plus a 3D-printed body to hold them. Here's what it looks like.</p>
+</td></tr>
+
+<tr><td style="padding:20px 28px 0;">
+  <img src="https://raw.githubusercontent.com/AtlasAutoware/atlas-autoware/509f678/public/email/2026-09-car2/car-v2-front.jpg" width="544" alt="Render of car 2: the printed deck with side pods, bumper, rear wing, camera arch and lidar mount, with both circuit boards stacked in the middle" style="display:block;width:100%;max-width:544px;height:auto;border-radius:12px;">
+  <p style="margin:8px 0 0;font-family:Inter,Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#71717a;">A render from our design files, not a photo. The lidar, camera and Jetson are simple stand-in shapes.</p>
+</td></tr>
+
+<!-- Boards -->
+<tr><td style="padding:32px 28px 0;font-family:Inter,Helvetica,Arial,sans-serif;">
+  <p style="margin:0;font-size:12px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:#dc2626;">The electronics</p>
+  <h2 style="margin:8px 0 0;font-family:'Space Grotesk',Arial,Helvetica,sans-serif;font-size:24px;line-height:1.2;font-weight:700;color:#0a0a0f;">Two boards we laid out ourselves</h2>
+  <p style="margin:12px 0 0;font-size:16px;line-height:1.6;color:#3f3f46;">Car 1 is a pile of off-the-shelf modules joined by a lot of wiring. On car 2, most of that wiring lives on two circuit boards that stack on top of each other.</p>
+</td></tr>
+<tr><td style="padding:18px 28px 0;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+    <td width="50%" valign="top" style="padding-right:8px;">
+      <img src="https://raw.githubusercontent.com/AtlasAutoware/atlas-autoware/509f678/public/email/2026-09-car2/drive-board.jpg" width="264" alt="Render of the drive board" style="display:block;width:100%;height:auto;border-radius:10px;">
+      <p style="margin:12px 0 0;font-family:'Space Grotesk',Arial,Helvetica,sans-serif;font-size:17px;font-weight:700;color:#0a0a0f;">Drive board</p>
+      <p style="margin:4px 0 0;font-family:Inter,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.55;color:#52525b;">The motor controller, a built-in battery pack with its own protection chip, USB-C charging, a soft-start power switch, and power for the steering servo and lidar.</p>
+    </td>
+    <td width="50%" valign="top" style="padding-left:8px;">
+      <img src="https://raw.githubusercontent.com/AtlasAutoware/atlas-autoware/509f678/public/email/2026-09-car2/brain-board.jpg" width="264" alt="Render of the brain board, the carrier for the Jetson" style="display:block;width:100%;height:auto;border-radius:10px;">
+      <p style="margin:12px 0 0;font-family:'Space Grotesk',Arial,Helvetica,sans-serif;font-size:17px;font-weight:700;color:#0a0a0f;">Brain board</p>
+      <p style="margin:4px 0 0;font-family:Inter,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.55;color:#52525b;">A carrier for the NVIDIA Jetson Orin Nano, based on Antmicro's open-source design, with Power over Ethernet for the camera and a second Ethernet port for the lidar.</p>
+    </td>
+  </tr>
+  </table>
+</td></tr>
+<tr><td style="padding:24px 28px 0;">
+  <img src="https://raw.githubusercontent.com/AtlasAutoware/atlas-autoware/509f678/public/email/2026-09-car2/car-v2-exploded.jpg" width="544" alt="Exploded render of car 2 showing the drive board and the Jetson board stacked above the printed deck" style="display:block;width:100%;max-width:544px;height:auto;border-radius:12px;">
+  <p style="margin:8px 0 0;font-family:Inter,Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#71717a;">The stack, pulled apart. The whole kit is printed in carbon-fiber PETG and bolts onto a Traxxas Slash 4x4 chassis.</p>
+</td></tr>
+
+<!-- Next -->
+<tr><td style="padding:32px 28px 0;font-family:Inter,Helvetica,Arial,sans-serif;">
+  <p style="margin:0;font-size:12px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:#dc2626;">What's next</p>
+  <p style="margin:10px 0 0;font-size:16px;line-height:1.6;color:#3f3f46;">First a test print of the carbon-fiber kit to check that it fits the real chassis, then a few last checks on the boards, then ordering parts. I'll send photos once the real thing starts coming together.</p>
+</td></tr>
+
+<!-- Goal -->
+<tr><td style="padding:28px 28px 0;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#fef2f2;border:1px solid #fecaca;border-radius:12px;">
+  <tr><td style="padding:22px 22px;font-family:Inter,Helvetica,Arial,sans-serif;">
+    <p style="margin:0;font-size:12px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:#b91c1c;">Our goal this season</p>
+    <p style="margin:6px 0 0;font-family:'Space Grotesk',Arial,Helvetica,sans-serif;font-size:28px;font-weight:700;color:#0a0a0f;">$2,500</p>
+    <p style="margin:6px 0 0;font-size:15px;line-height:1.55;color:#3f3f46;">We raised our goal to cover car 2's parts and travel to our next competition. If you know a business that might sponsor a student team, forwarding this email helps a lot.</p>
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px;"><tr>
+      <td style="background:#dc2626;border-radius:10px;"><a href="https://atlasautoware.org/car-v2" style="display:inline-block;padding:12px 20px;font-family:Inter,Helvetica,Arial,sans-serif;font-size:15px;font-weight:700;color:#ffffff;text-decoration:none;">See car 2</a></td>
+      <td style="width:10px;"></td>
+      <td style="border:1px solid #dc2626;border-radius:10px;"><a href="https://atlasautoware.org/donate" style="display:inline-block;padding:11px 19px;font-family:Inter,Helvetica,Arial,sans-serif;font-size:15px;font-weight:700;color:#b91c1c;text-decoration:none;">Donate</a></td>
+    </tr></table>
+  </td></tr>
+  </table>
+</td></tr>
+
+<!-- Thanks -->
+<tr><td style="padding:28px 28px 0;font-family:Inter,Helvetica,Arial,sans-serif;">
+  <p style="margin:0;font-size:16px;line-height:1.6;color:#3f3f46;">A big welcome to our newest sponsors, McLean Family Dentistry and MISUMI, and thank you to everyone who has helped us get this far. None of this happens without you.</p>
+  <p style="margin:20px 0 0;font-size:16px;line-height:1.6;color:#3f3f46;">Eshan Iyer<br><span style="color:#71717a;">Founder, Atlas Autoware</span></p>
+</td></tr>
+
+<!-- Footer -->
+<tr><td style="padding:32px 28px 28px;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-top:1px solid #e4e4e7;"><tr><td style="padding-top:18px;font-family:Inter,Helvetica,Arial,sans-serif;font-size:12px;line-height:1.6;color:#71717a;">
+    <a href="https://atlasautoware.org" style="color:#b91c1c;text-decoration:none;font-weight:600;">atlasautoware.org</a> &middot; <a href="https://www.linkedin.com/company/100594298/" style="color:#b91c1c;text-decoration:none;font-weight:600;">LinkedIn</a> &middot; <a href="https://www.instagram.com/atlasautoware/" style="color:#b91c1c;text-decoration:none;font-weight:600;">Instagram</a><br>
+    Atlas Autoware is a student-run 501(c)(3) nonprofit, EIN 88-3747265.<br>
+    3920 Green Look Court, Fairfax, VA 22033-2725 &middot; 703-357-3347<br>
+    You're getting this because you've supported Atlas Autoware. Reply "unsubscribe" and we'll take you off the list.
+  </td></tr></table>
+</td></tr>
+
+</table>
+</td></tr>
+</table>
+</body>
+</html>
