@@ -20,6 +20,7 @@ import carCutout from "@/assets/atlas-car-cutout.webp";
 import buildPhoto from "@/assets/car-build-bench.webp";
 import chassisPhoto from "@/assets/car-chassis-topdown.webp";
 import teamPhoto from "@/assets/2025_Team.png";
+import carV2Render from "@/assets/car-v2/car-front-left.webp";
 
 export const Route = createFileRoute("/home")({
   head: () => ({
@@ -354,8 +355,16 @@ function Projects() {
       img: rcCarPhoto as string | null,
       title: "Atlas One",
       desc: "Our first car. It sees the road through cameras, figures out where the lane actually is, and steers to stay in it - all running live on a Jetson Nano.",
+      to: "/the-car",
+      cta: "Meet Atlas One",
     },
-    { img: null, title: "Atlas Two", desc: "Coming soon." },
+    {
+      img: carV2Render as string | null,
+      title: "Atlas Two",
+      desc: "In design now: two circuit boards we laid out ourselves, a built-in battery pack and a 3D-printed carbon-fiber kit. The picture is a render from our design files.",
+      to: "/car-v2",
+      cta: "See the renders",
+    },
   ];
 
   return (
@@ -372,7 +381,7 @@ function Projects() {
           {projects.map((p) => (
             <article
               key={p.title}
-              className="group aa-card aa-card--hover aa-card--lift overflow-hidden"
+              className="group relative aa-card aa-card--hover aa-card--lift overflow-hidden"
             >
               {p.img ? (
                 <div className="aspect-[4/3] overflow-hidden bg-elevated">
@@ -392,8 +401,15 @@ function Projects() {
                 </div>
               )}
               <div className="p-6">
-                <h3 className="text-xl font-bold tracking-tight text-ink">{p.title}</h3>
+                <h3 className="text-xl font-bold tracking-tight text-ink">
+                  <Link to={p.to} className="after:absolute after:inset-0">
+                    {p.title}
+                  </Link>
+                </h3>
                 <p className="mt-2 aa-card__body">{p.desc}</p>
+                <p className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-text">
+                  {p.cta} <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                </p>
               </div>
             </article>
           ))}
