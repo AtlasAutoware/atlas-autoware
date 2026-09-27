@@ -8,6 +8,7 @@ import { SEASON_GOAL } from "@/components/Fundraising";
 import carFrontLeft from "@/assets/car-v2/car-front-left.webp";
 import carExploded from "@/assets/car-v2/car-exploded.webp";
 import carRearRight from "@/assets/car-v2/car-rear-right.webp";
+import carSide from "@/assets/car-v2/car-side.webp";
 import carTop from "@/assets/car-v2/car-top.webp";
 import driveIso from "@/assets/car-v2/drive-iso.webp";
 import brainIso from "@/assets/car-v2/brain-iso.webp";
@@ -19,13 +20,13 @@ export const Route = createFileRoute("/car-v2")({
       {
         name: "description",
         content:
-          "Atlas Autoware's second car: two custom circuit boards, a built-in battery pack and a 3D-printed carbon-fiber kit, designed by students. Here are the renders.",
+          "Atlas Autoware's second car: two custom circuit boards, a built-in battery pack and a 3D-printed carbon-fiber kit, designed by students. Here is the whole car, assembled in renders.",
       },
       { property: "og:title", content: "Car v2 · Atlas Autoware" },
       {
         property: "og:description",
         content:
-          "Our second self-driving race car, designed from scratch: a custom motor controller and battery board, a custom Jetson carrier, and a printed carbon-fiber kit.",
+          "Our second self-driving race car, designed from scratch and assembled in one model: a custom motor controller and battery board, a custom Jetson carrier, a printed carbon-fiber kit and every cable.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -80,8 +81,9 @@ function Hero() {
             Jetson, and a 3D-printed carbon-fiber kit that holds it all together.
           </p>
           <p className="mt-4 text-sm text-ink-subtle">
-            These are renders straight from our design files, not photos. We haven't ordered the
-            parts yet, and that's what the fundraiser is for.
+            These are renders straight from our design files, not photos. The parts we buy rather
+            than make, like the chassis, lidar, camera and Jetson, are simplified stand-ins. We
+            haven't ordered the parts yet, and that's what the fundraiser is for.
           </p>
         </div>
 
@@ -90,7 +92,7 @@ function Hero() {
           <div className="relative rounded-2xl overflow-hidden border border-line shadow-[0_24px_80px_-24px_rgba(220,38,38,0.35)]">
             <img
               src={carFrontLeft}
-              alt="Render of car v2: the printed deck with side pods, bumper, rear wing, camera arch and lidar mount, with both circuit boards stacked in the middle"
+              alt="Render of car v2 on its chassis: the printed carbon-fiber deck with side pods, bumper and rear wing, the lidar in the nose, the camera on an arch above it, and a canopy with two Wi-Fi antennas over the circuit boards"
               width={1800}
               height={1200}
               className="w-full h-auto"
@@ -111,14 +113,14 @@ function Gallery() {
           className="max-w-3xl"
           eyebrow="The renders"
           title="Two boards, one stack, one printed kit."
-          lead="The drive board sits on the deck and the Jetson board stacks on top of it. The whole kit bolts onto a Traxxas Slash 4x4 chassis (not shown)."
+          lead="The drive board sits on the deck, the Jetson board stacks on top of it, and a printed canopy covers both. Underneath is the Traxxas Slash 4x4 chassis, drawn here as a simplified stand-in."
         />
         <div className="mt-14 grid gap-6 md:grid-cols-2">
           <div className="md:col-span-2">
             <Figure
               src={carExploded}
-              alt="Exploded render of car v2 with the drive board and the Jetson board lifted above the deck to show how they stack"
-              caption="Exploded view: the drive board lifted 45 mm and the Jetson board 90 mm, so you can see the stack."
+              alt="Exploded render of car v2 with the drive board, the Jetson board and the canopy lifted above the deck to show how they stack"
+              caption="Exploded view: the drive board, the Jetson board and the canopy lifted off the deck to show the stack."
               width={1800}
               height={1200}
             />
@@ -126,17 +128,88 @@ function Gallery() {
           <Figure
             src={carRearRight}
             alt="Render of car v2 from the rear right"
-            caption="From the back: rear wing, side pods and the board stack."
+            caption="From the back: the rear wing, the canopy with its two Wi-Fi antennas, and the camera cable running along the right side pod."
             width={1800}
             height={1200}
           />
           <Figure
-            src={carTop}
-            alt="Render of car v2 from above"
-            caption="From above. The lidar, camera and Jetson are simple stand-in shapes in these renders."
+            src={carSide}
+            alt="Render of car v2 from the right side"
+            caption="From the side. The lidar sits low in the nose and the camera rides on the arch above it."
             width={1800}
             height={1200}
           />
+          <div className="md:col-span-2">
+            <Figure
+              src={carTop}
+              alt="Render of car v2 from above, nose to the right"
+              caption="From above, nose to the right. The Jetson's fan breathes through the grille in the canopy."
+              width={1800}
+              height={1200}
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function WholeCar() {
+  const facts = [
+    { label: "Printed parts on the car", value: "25, mostly carbon-fiber PETG" },
+    { label: "Cable runs in the model", value: "14, each one measured" },
+    { label: "Overlaps in the final check", value: "0" },
+    { label: "Battery", value: "12 × 18650 cells, about 121 Wh" },
+    { label: "Everyday cables", value: "One USB-C, for charging and debugging" },
+  ];
+  const catches = [
+    {
+      n: "01",
+      title: "The camera plug had nowhere to go",
+      desc: "The camera's network jack points at the side of the car, 2 mm from the side pod, with the cooling fan right behind the wall. The fan moved forward, where it now lines up with the motor controller's power stage, and the pod got a slot for the plug.",
+    },
+    {
+      n: "02",
+      title: "A cable hole over a bolt",
+      desc: "The hole for the steering servo's cable sat on top of the plate that joins two deck pieces, right around one of its bolts. It moved forward into the gap between that plate and a stiffening rib.",
+    },
+    {
+      n: "03",
+      title: "The last few parts",
+      desc: "A canopy over the electronics, with mounts for two Wi-Fi antennas and a grille for the Jetson's fan, and a stand that holds the car with its wheels off the bench for motor tests.",
+    },
+  ];
+  return (
+    <section className="py-20 md:py-28">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="grid lg:grid-cols-12 gap-12 items-start">
+          <div className="lg:col-span-5">
+            <SectionHeader
+              eyebrow="The whole car"
+              title="Every part, down to the cables"
+              lead="We put the whole car into one model: every printed part, both boards, the battery, the sensors, every plug and every cable run. A script checks every pair of parts for overlaps and measures each cable, so problems show up before anything is printed or ordered."
+            />
+          </div>
+          <div className="lg:col-span-7">
+            <dl className="aa-card overflow-hidden">
+              {facts.map((f) => (
+                <div key={f.label} className="aa-spec-row">
+                  <dt className="aa-eyebrow !text-ink-subtle">{f.label}</dt>
+                  <dd className="font-medium text-ink text-right">{f.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
+        <p className="mt-16 aa-eyebrow">What putting it all together caught</p>
+        <div className="mt-6 grid gap-6 md:grid-cols-3">
+          {catches.map((c) => (
+            <div key={c.n} className="aa-card aa-card--hover p-6 md:p-8">
+              <div className="aa-display text-3xl font-bold aa-gradient-text">{c.n}</div>
+              <h3 className="mt-3 text-xl font-bold tracking-tight text-ink">{c.title}</h3>
+              <p className="mt-3 aa-card__body">{c.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -157,7 +230,7 @@ function Boards() {
     "Based on Antmicro's open-source Jetson Orin baseboard",
   ];
   return (
-    <section className="py-20 md:py-28">
+    <section className="aa-band py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeader
           eyebrow="The electronics"
@@ -262,6 +335,7 @@ function CarV2Page() {
       <main>
         <Hero />
         <Gallery />
+        <WholeCar />
         <Boards />
         <SupportCTA />
       </main>
