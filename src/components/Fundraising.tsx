@@ -2,7 +2,7 @@ import { Plane, Wrench } from "lucide-react";
 import { Eyebrow } from "@/components/Section";
 
 /** Season goal. Update `raised` here and both the home and donate pages follow. */
-export const SEASON_GOAL = 1500;
+export const SEASON_GOAL = 2500;
 export const SEASON_RAISED = 700;
 
 const DEFAULT_ITEMS = [

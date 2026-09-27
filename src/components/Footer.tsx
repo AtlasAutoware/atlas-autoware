@@ -22,6 +22,7 @@ export function Footer() {
           <div className="aa-footer__links">
             <Link to="/home">Home</Link>
             <Link to="/the-car">The Car</Link>
+            <Link to="/car-v2">Car v2</Link>
             <Link to="/donate">Donate</Link>
             <Link to="/donate" hash="sponsors">
               Our Sponsors

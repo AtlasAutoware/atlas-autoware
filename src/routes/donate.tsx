@@ -144,7 +144,7 @@ function DonatePage() {
                 },
                 {
                   title: "Car #2",
-                  desc: "A second car with better parts, the upgrade we've been planning.",
+                  desc: "A second car with custom circuit boards we designed ourselves. See the renders on the Car v2 page.",
                 },
               ]}
             />

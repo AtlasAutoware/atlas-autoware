@@ -256,8 +256,8 @@ function SupportCTA() {
           <Link to="/donate" className="aa-btn aa-btn--primary">
             Chip In <ArrowRight aria-hidden="true" />
           </Link>
-          <Link to="/home" className="aa-btn aa-btn--outline">
-            Back Home
+          <Link to="/car-v2" className="aa-btn aa-btn--outline">
+            See Car v2
           </Link>
         </div>
       </div>

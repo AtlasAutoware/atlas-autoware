@@ -6,6 +6,7 @@ import atlasLogo from "@/assets/atlas-logo.png";
 const navLinks: Array<[string, string]> = [
   ["Home", "/home"],
   ["The Car", "/the-car"],
+  ["Car v2", "/car-v2"],
 ];
 
 /** Brand mark + wordmark. The disc mark is inverted in the dark theme (see .aa-brand in styles.css). */
