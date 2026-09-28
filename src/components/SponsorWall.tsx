@@ -28,6 +28,8 @@ import hakkoLogo from "@/assets/hakko.jpg";
 import savoxLogo from "@/assets/savox.png";
 import mcleanDentistryLogo from "@/assets/sponsors/mclean-family-dentistry.png";
 import misumiLogo from "@/assets/sponsors/misumi.png";
+import nvlxLabsLogo from "@/assets/sponsors/nvlx-labs.png";
+import andonstarLogo from "@/assets/sponsors/andonstar.png";
 
 type Sponsor = {
   name: string;
@@ -99,6 +101,12 @@ export const sponsorGroups: SponsorGroup[] = [
         darkPanel: true,
       },
       {
+        name: "NVLX Labs",
+        logo: nvlxLabsLogo,
+        href: "https://www.nvlxlabs.com/",
+        darkPanel: true,
+      },
+      {
         name: "LUCID Vision Labs",
         logo: lucidLogo,
         href: "https://thinklucid.com/",
@@ -144,6 +152,7 @@ export const sponsorGroups: SponsorGroup[] = [
       { name: "Hakko", logo: hakkoLogo, href: "https://www.hakkousa.com/", tag: HARDWARE },
       { name: "Savox", logo: savoxLogo, href: "https://www.teamsavox.com/", tag: HARDWARE },
       { name: "MISUMI", logo: misumiLogo, href: "https://us.misumi-ec.com/", tag: HARDWARE },
+      { name: "Andonstar", logo: andonstarLogo, href: "https://andonstar.com/", tag: HARDWARE },
     ],
   },
 ];
