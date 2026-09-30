@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -100 200 200" width="400" height="400" role="img" aria-label="29th Infantry Division shoulder sleeve insignia">
+  <title>29th Infantry Division shoulder sleeve insignia</title>
+  <!-- US Army design: a taeguk on a disc with an olive-drab border, the (heraldic) dexter half blue and the sinister half gray. -->
+  <circle r="100" fill="#4b5320"/>
+  <circle r="90" fill="#c4c6c8"/>
+  <path d="M0,-90 A90,90 0 0 0 0,90 A45,45 0 0 0 0,0 A45,45 0 0 1 0,-90 Z" fill="#1c2f8a"/>
+</svg>

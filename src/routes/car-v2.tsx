@@ -12,6 +12,7 @@ import carSide from "@/assets/car-v2/car-side.webp";
 import carTop from "@/assets/car-v2/car-top.webp";
 import driveIso from "@/assets/car-v2/drive-iso.webp";
 import brainIso from "@/assets/car-v2/brain-iso.webp";
+import infantry29Patch from "@/assets/sponsors/29th-infantry-division.svg";
 
 export const Route = createFileRoute("/car-v2")({
   head: () => ({
@@ -303,6 +304,35 @@ function BoardCard({
   );
 }
 
+function Patch() {
+  return (
+    <section className="py-20 md:py-28">
+      <div className="mx-auto max-w-5xl px-6">
+        <div className="aa-card p-8 md:p-12 grid gap-10 md:grid-cols-[auto_1fr] items-center">
+          <img
+            src={infantry29Patch}
+            alt="The 29th Infantry Division shoulder patch: a blue and gray taeguk on a round olive-drab border"
+            width={200}
+            height={200}
+            loading="lazy"
+            className="mx-auto w-40 h-40 md:w-48 md:h-48"
+          />
+          <div>
+            <SectionHeader
+              eyebrow="On the car"
+              title="Car two will wear the Blue and Gray."
+              lead="John Lyon VFW Post 3150 in Arlington asked us to put the shoulder patch of the 29th Infantry Division on car two, and we will. The post's namesake, John Lyon, served in the 29th in World War I. The 29th is a National Guard division based in Northern Virginia. It formed from states that sent soldiers to both sides of the Civil War, which is where its nickname and the two halves of its patch come from."
+            />
+            <p className="mt-4 text-sm text-ink-subtle">
+              The patch isn't in the renders above yet; it goes on the car when we build it.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function SupportCTA() {
   return (
     <section className="relative isolate py-20 md:py-28 overflow-hidden">
@@ -337,6 +367,7 @@ function CarV2Page() {
         <Gallery />
         <WholeCar />
         <Boards />
+        <Patch />
         <SupportCTA />
       </main>
       <Footer />

@@ -30,6 +30,7 @@ import mcleanDentistryLogo from "@/assets/sponsors/mclean-family-dentistry.png";
 import misumiLogo from "@/assets/sponsors/misumi.png";
 import nvlxLabsLogo from "@/assets/sponsors/nvlx-labs.png";
 import andonstarLogo from "@/assets/sponsors/andonstar.png";
+import infantry29Patch from "@/assets/sponsors/29th-infantry-division.svg";
 
 type Sponsor = {
   name: string;
@@ -105,6 +106,13 @@ export const sponsorGroups: SponsorGroup[] = [
         logo: nvlxLabsLogo,
         href: "https://www.nvlxlabs.com/",
         darkPanel: true,
+      },
+      {
+        // The post's namesake, John Lyon, served in the 29th Infantry Division in WWI; the
+        // post asked for the division's patch on car 2, so the patch stands in for a logo.
+        name: "John Lyon VFW Post 3150",
+        logo: infantry29Patch,
+        href: "https://vfw3150.org/",
       },
       {
         name: "LUCID Vision Labs",
