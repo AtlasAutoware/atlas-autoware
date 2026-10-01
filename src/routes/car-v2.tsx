@@ -343,7 +343,7 @@ function SupportCTA() {
           className="max-w-3xl"
           eyebrow="Help us build it"
           title="Help Us Turn Renders into a Real Car"
-          lead={`Right now car two exists only as design files. We're raising $${SEASON_GOAL.toLocaleString()} this season for its parts and for travel to our next competition. Every sponsor gets photo updates as it comes together.`}
+          lead={`Right now car two exists only as design files, and its custom circuit boards alone cost about $2,000. We're raising $${SEASON_GOAL.toLocaleString()} this season for its parts, a computer to train its AI models, and travel to our next competition. Every sponsor gets photo updates as it comes together.`}
         />
         <div className="mt-9 flex flex-wrap justify-center gap-4">
           <Link to="/donate" className="aa-btn aa-btn--primary">

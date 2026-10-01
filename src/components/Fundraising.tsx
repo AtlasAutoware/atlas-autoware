@@ -1,15 +1,21 @@
-import { Plane, Wrench } from "lucide-react";
+import { Cpu, Plane, Wrench } from "lucide-react";
 import { Eyebrow } from "@/components/Section";
 
 /** Season goal. Update `raised` here and both the home and donate pages follow. */
-export const SEASON_GOAL = 2500;
+export const SEASON_GOAL = 5000;
 export const SEASON_RAISED = 700;
+
+const ITEM_ICONS = [Plane, Wrench, Cpu];
 
 const DEFAULT_ITEMS = [
   { title: "Getting to competitions", desc: "Travel, gas, and entry fees to events like IV 2026." },
   {
     title: "Building Atlas Two - 2nd Car",
-    desc: "A second car with better sensors and faster compute.",
+    desc: "A second car with better sensors and faster compute. Its custom circuit boards alone cost about $2,000.",
+  },
+  {
+    title: "Training computer",
+    desc: "A dedicated computer to train our cars' AI models.",
   },
 ];
 
@@ -51,9 +57,9 @@ export function FundraisingProgress({
       >
         <div style={{ width: `${pct}%` }} />
       </div>
-      <div className="mt-8 grid md:grid-cols-2 gap-6">
+      <div className={`mt-8 grid gap-6 ${items.length > 2 ? "md:grid-cols-3" : "md:grid-cols-2"}`}>
         {items.map((item, i) => {
-          const Icon = i === 0 ? Plane : Wrench;
+          const Icon = ITEM_ICONS[Math.min(i, ITEM_ICONS.length - 1)];
           return (
             <div key={item.title} className="flex gap-4">
               <span className="aa-icon-tile">

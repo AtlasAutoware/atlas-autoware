@@ -111,8 +111,8 @@ function DonatePage() {
                 <span className="font-semibold text-brand-text">
                   ${SEASON_GOAL.toLocaleString()}
                 </span>{" "}
-                to get to our next competition and build a second, better car. No salaries, no
-                overhead, we promise.
+                to get to our next competition, build a second, better car, and buy a computer to
+                train its AI. No salaries, no overhead, we promise.
               </p>
               <div className="mt-8 inline-flex items-center gap-2 text-sm text-ink-muted">
                 <ShieldCheck className="w-4 h-4 text-brand-text" aria-hidden="true" />
@@ -144,7 +144,11 @@ function DonatePage() {
                 },
                 {
                   title: "Car #2",
-                  desc: "A second car with custom circuit boards we designed ourselves. See the renders on the Car v2 page.",
+                  desc: "A second car with custom circuit boards we designed ourselves. The boards alone cost about $2,000. See the renders on the Car v2 page.",
+                },
+                {
+                  title: "Training computer",
+                  desc: "A dedicated computer to train our cars' AI models.",
                 },
               ]}
             />
