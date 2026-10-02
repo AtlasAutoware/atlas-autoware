@@ -31,6 +31,7 @@ import misumiLogo from "@/assets/sponsors/misumi.png";
 import nvlxLabsLogo from "@/assets/sponsors/nvlx-labs.png";
 import andonstarLogo from "@/assets/sponsors/andonstar.png";
 import infantry29Patch from "@/assets/sponsors/29th-infantry-division.svg";
+import somireddyLawLogo from "@/assets/sponsors/somireddy-law-group.png";
 
 type Sponsor = {
   name: string;
@@ -113,6 +114,11 @@ export const sponsorGroups: SponsorGroup[] = [
         name: "John Lyon VFW Post 3150",
         logo: infantry29Patch,
         href: "https://vfw3150.org/",
+      },
+      {
+        name: "Somireddy Law Group",
+        logo: somireddyLawLogo,
+        href: "https://somireddylaw.com/",
       },
       {
         name: "LUCID Vision Labs",
